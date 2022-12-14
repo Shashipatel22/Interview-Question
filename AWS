@@ -45,6 +45,14 @@ and third-party resources, and provision and manage them in an orderly and predi
 >>AWS CloudFormation simplifies provisioning and management on AWS. You can create templates for the service or application architectures you want 
 and have AWS CloudFormation use those templates for quick and reliable provisioning of the services or applications (called “stacks”).
 
+---Advantages
+>>CloudFormation allows you to use programming languages or a simple text file to model and provision, in an automated and secure manner, 
+all the resources needed for your applications across all regions and accounts. This gives you a single source of truth for your AWS and third-party resources.
+
+---Disadvantages
+>>CloudFormation uses either JSON or YAML. This makes CloudFormation easy to read and manage. But there is a constraint that doesn't allow AWS developers to 
+create CloudFormation templates greater than 51MB in size. In case the template exceeds this size limit, developers need to create a nested stack for the templates.
+
 >we can use this template to create the services we can use this code to version control and if we can modify the code we can easily undesrstand
 >>aws cloud-formation uses YAML and JSON lanugauge
 >>Save the code in an S3 bucket, which serves as a repository for the code.
