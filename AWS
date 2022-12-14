@@ -17,3 +17,4 @@ Networking - These include VPC, Amazon CloudFront, Route53
 AWS regions are separate geographical areas, like the US-West 1 (North California) and Asia South (Mumbai). On the other hand, availability zones
 are the areas that are present inside the regions. These are generally isolated zones that can replicate themselves whenever required.
 
+4 - what is code smell
