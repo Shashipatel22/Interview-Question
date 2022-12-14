@@ -1,3 +1,61 @@
+1 - Explain DevOps? 
+
+>>The DevOps is a combination of two words one is software Development, and second is Operations. 
+It allows a single team to handle the entire application lifecycle, from development to testing, deployment, and operations. 
+DevOps helps you to reduce the disconnection between software developers, quality assurance (QA) engineers, and system administrators.
+
+2 - What are the principles of DevOps?
+The principles behind DevOps are:
+
+Continuous deployment
+Infrastructure as code
+Automation
+Monitoring
+Security
+
+3 - How DevOps is helpful to developers?
+DevOps is very helpful for developers to fix the bugs and quickly implement the new features. It also helps in more transparent communication 
+between the team members.
+
+4 - Explain some popular tools of DevOps?
+Here are some popular tools of DevOps, such as:
+
+Jenkins:- Jenkins is a DevOps tool for monitoring the execution of repeated tasks. Jenkins is a software that allows continuous integration. 
+And it will be installed on a server where the central build will take place.
+
+Ansible:- Ansible is a leading DevOps tool. Ansible is an open-source IT engine that automates application deployment, 
+cloud provisioning, intra service orchestration, and other IT tools.
+
+Nagios:- Nagios is one of the more useful tools for DevOps. It can determine the errors and rectify them with the help of network, infrastructure, 
+server, and log monitoring systems.
+
+Docker:- Docker is a high-end DevOps tool that allows building, ship, and run distributed applications on multiple systems.
+
+Git:- Git is an open-source distributed version control system that is freely available for everyone. It is designed to handle minor to major
+projects with speed and efficiency.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1 - what is shell scripting in DevOps and what is Ansible and what is difference between shell-script and Ansible in DevOps purpose
 
 
