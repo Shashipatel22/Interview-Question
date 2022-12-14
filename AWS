@@ -58,6 +58,20 @@ and have AWS CloudFormation use those templates for quick and reliable provision
 
 9 - what is stack policy in cloud-formation
 
+10 - what is cloudtrail
+
+>>cloudtrail is used to see th login logut details and activitesits not give detailed information
+
+11 - what is AWS Service Catalog
+>>AWS Service Catalog enables organizations to create and manage catalogs of IT services that are approved for AWS. 
+These IT services can include everything from virtual machine images, servers, software, databases, and more to complete multi-tier application architectures
+
+12 - what is AWs SSM
+>>service manager is  configuration management tool
+               or 
+>>AWS Systems Manager Agent (SSM Agent) is Amazon software that runs on Amazon Elastic Compute Cloud (Amazon EC2) instances, edge devices, and on-premises servers 
+and virtual machines (VMs). SSM Agent makes it possible for Systems Manager to update, manage, and configure these resources
+
 6 - what JSON
 JavaScript Object Notation (JSON)
 >>It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, 
@@ -109,8 +123,13 @@ You can use Amazon Kinesis Firehose to move the data from Amazon S3 to Amazon El
 >>Most of the AWS services have their logging options. Also, some of them have an account level logging, like in AWS CloudTrail, AWS Config, and others.
 Let’s take a look at two services in specific:
 
-1-AWS CloudTrail
-2-AWS Config
+1-AWS CloudTrail:
+>>cloudtrail is used to see th login logut details and activitesits not give detailed information
+
+2-AWS Config:
+>>AWS Config is a fully managed service that provides you with an AWS resource inventory, configuration history, and configuration 
+change notifications to enable security and governance.
+
 
 15 - What is a DDoS attack, and what services can minimize them?
 
