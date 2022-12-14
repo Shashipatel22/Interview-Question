@@ -694,9 +694,35 @@ capacity provisioning and automatic scaling, code and security patch deployment,
 >>AWS Service Catalog enables organizations to create and manage catalogs of IT services that are approved for AWS. 
 These IT services can include everything from virtual machine images, servers, software, databases, and more to complete multi-tier application architectures
 
+60 - what is SNS
 
+>>Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers (also known as producers and consumers).
+ Publishers communicate asynchronously with subscribers by sending messages to a topic, which is a logical access point and communication channel
 
+61 - how you can handle 20 aws accounts
 
+>>if we have 20 accounts we use master and sub-account architecture we use. master is there we use
+organzations, properly use organzation units we kept as internal external and third party
+we are properly segrgated. then we can apply security control policy ,we can restrict users using permisiion boundary
+
+62 - What is Inspector in AWS
+
+>>Amazon Inspector is an automated vulnerability management service that continually scans AWS workloads for software vulnerabilities and unintended network exposure.
+
+65 - can you explain 3tier architecture or elbrate them
+>>first we have extranal load balancer and internal load balancer then the extranal load balancer is open to the internet
+through route53 and internal load balancer is between app and web and the app is connected to database
+
+>>using public and private subnets
+
+66 - what is deregistration delay
+>>Elastic Load Balancing stops sending requests to targets that are deregistering. By default, Elastic Load Balancing waits 300 seconds before completing the deregistration process,
+which can help in-flight requests to the target to complete
+         or
+>>Connection draining allows you to specify a maximum time (between 1 and 3,600 seconds and default 300 seconds) to keep the connections alive before reporting the instance as de-registered. 
+The maximum timeout limit does not apply to connections to unhealthy instances.
+
+67 -
 
 
 
