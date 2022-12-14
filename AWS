@@ -192,25 +192,278 @@ As a result, if the primary instance fails, the backup instance will assist in r
 Reserved instances, on the other hand, allow you to specify attributes such as instance type, platform, tenancy, region, and availability zone. 
 Reserved instances offer significant reductions and capacity reservations when instances in certain availability zones are used.
 
+26 - How would you address a situation in which the relational database engine frequently collapses when traffic to your RDS instances increases, given that the RDS instance replica is not promoted as the master instance?
+
+>>A larger RDS instance type is required for handling significant quantities of traffic, as well as producing manual or automated snapshots to recover data if the RDS instance fails
+
+27 - What do you understand by 'changing' in Amazon EC2?
+
+>>To make limit administration easier for customers, Amazon EC2 now offers the option to switch from the current 'instance count-based limitations' to the new 'vCPU Based restrictions.' 
+As a result, when launching a combination of instance types based on demand, utilization is measured in terms of the number of vCPUs.
+
+28 - Define Snapshots in Amazon Lightsail?
+
+>>Top 100+ AWS Interview Questions and Answers for 2023
+Lesson 13 of 14By Shyamli Jha
+
+Last updated on Nov 29, 2022141039591
+Top 100+ AWS Interview Questions and Answers [Updated]
+PreviousNext
+Table of Contents
+Basic AWS Interview QuestionsAWS Interview Questions for Intermediate and ExperiencedAdvanced AWS Interview Questions and AnswersAWS Scenario-based QuestionsTechnical and Non-Technical AWS Interview QuestionsView More
+Today’s modern world is witnessing a significant change in how businesses and organizations work. Everything is getting digitized, and the introduction of cloud and cloud computing platforms have been a major driving force behind this growth. Today, most businesses are using or are planning to use cloud computing for many of their operations, which consequently has led to a massive surge in the need for cloud professionals. 
+
+If you are interested in a career in the cloud industry, your chance has arrived. With cloud computing platforms like AWS taking the present business scenarios by storm, getting trained and certified in that particular platform can provide you with great career prospects. 
+
+But in order to get your AWS career started, you need to set up some AWS interviews and ace them. In the spirit of doing that, here are some AWS interview questions and answers that will help you with the interview process. There are a number of different AWS-related questions covered in this article, ranging from basic to advanced, and scenario-based questions as well.
+
+ 
+
+Basic AWS Interview Questions
+1. Define and explain the three basic types of cloud services and the AWS products that are built based on them?
+The three basic types of cloud services are:
+
+Computing
+Storage
+Networking
+Here are some of the AWS products that are built based on the three cloud service types:
+
+Computing - These include EC2, Elastic Beanstalk, Lambda, Auto-Scaling, and Lightsat.
+
+Storage - These include S3, Glacier, Elastic Block Storage, Elastic File System.
+
+Networking - These include VPC, Amazon CloudFront, Route53
+
+2. What is the relation between the Availability Zone and Region?
+AWS regions are separate geographical areas, like the US-West 1 (North California) and Asia South (Mumbai). On the other hand, availability zones are the areas that are present inside the regions. These are generally isolated zones that can replicate themselves whenever required.
+
+aws region
+
+3. What is auto-scaling?
+Auto-scaling is a function that allows you to provision and launch new instances whenever there is a demand. It allows you to automatically increase or decrease resource capacity in relation to the demand.
+
+Cloud Architect Master's
+4. What is geo-targeting in CloudFront?
+Geo-Targeting is a concept where businesses can show personalized content to their audience based on their geographic location without changing the URL. This helps you create customized content for the audience of a specific geographical area, keeping their needs in the forefront.
+
+5. What are the steps involved in a CloudFormation Solution?
+Here are the steps involved in a CloudFormation solution:
+
+cloud formation
+
+Create or use an existing CloudFormation template using JSON or YAML format.
+Save the code in an S3 bucket, which serves as a repository for the code.
+Use AWS CloudFormation to call the bucket and create a stack on your template. 
+CloudFormation reads the file and understands the services that are called, their order, the relationship between the services, and provisions the services one after the other.
 
 
+Master's Program: AWS Cloud Architect
+Become an Expert in Amazon Web ServicesENROLL NOWMaster's Program: AWS Cloud Architect
+6. How do you upgrade or downgrade a system with near-zero downtime?
+You can upgrade or downgrade a system with near-zero downtime using the following steps of migration:
 
+Open EC2 console
+Choose Operating System AMI
+Launch an instance with the new instance type
+Install all the updates
+Install applications
+Test the instance to see if it’s working
+If working, deploy the new instance and replace the older instance
+Once it’s deployed, you can upgrade or downgrade the system with near-zero downtime.
+Take home these interview Q&As and get much more. Download the complete AWS Interview Guide here:
 
+7. What are the tools and techniques that you can use in AWS to identify if you are paying more than you should be, and how to correct it?
+You can know that you are paying the correct amount for the resources that you are using by employing the following resources:
 
+Check the Top Services Table
+It is a dashboard in the cost management console that shows you the top five most used services. This will let you know how much money you are spending on the resources in question.
+Cost Explorer
+There are cost explorer services available that will help you to view and analyze your usage costs for the last 13 months. You can also get a cost forecast for the upcoming three months.
+AWS Budgets
+This allows you to plan a budget for the services. Also, it will enable you to check if the current plan meets your budget and the details of how you use the services.
+Cost Allocation Tags
+This helps in identifying the resource that has cost more in a particular month. It lets you organize your resources and cost allocation tags to keep track of your AWS costs.
+8. Is there any other alternative tool to log into the cloud environment other than console?
+The that can help you log into the AWS resources are:
 
+Putty
+AWS CLI for Linux
+AWS CLI for Windows
+AWS CLI for Windows CMD
+AWS SDK
+Eclipse
+9. What services can be used to create a centralized logging solution?
+The essential services that you can use are Amazon CloudWatch Logs, store them in Amazon S3, and then use Amazon Elastic Search to visualize them. You can use Amazon Kinesis Firehose to move the data from Amazon S3 to Amazon ElasticSearch.
 
+centralized logging
 
+Free Course: Getting Started with AWS
+Learn the Fundamentals of AWSENROLL NOWFree Course: Getting Started with AWS
+10. What are the native AWS Security logging capabilities?
+Most of the AWS services have their logging options. Also, some of them have an account level logging, like in AWS CloudTrail, AWS Config, and others. Let’s take a look at two services in specific:
 
+AWS CloudTrail
+This is a service that provides a history of the AWS API calls for every account. It lets you perform security analysis, resource change tracking, and compliance auditing of your AWS environment as well. The best part about this service is that it enables you to configure it to send notifications via AWS SNS when new logs are delivered.
 
+AWS Config 
+This helps you understand the configuration changes that happen in your environment. This service provides an AWS inventory that includes configuration history, configuration change notification, and relationships between AWS resources. It can also be configured to send information via AWS SNS when new logs are delivered.
 
+11. What is a DDoS attack, and what services can minimize them?
+DDoS is a cyber-attack in which the perpetrator accesses a website and creates multiple sessions so that the other legitimate users cannot access the service. The native tools that can help you deny the DDoS attacks on your AWS services are:
 
+AWS Shield
+AWS WAF
+Amazon Route53
+Amazon CloudFront
+ELB
+VPC
+DDOS attack
 
+Cloud Architect Master's
+12. You are trying to provide a service in a particular region, but you do not see the service in that region. Why is this happening, and how do you fix it?
+Not all Amazon AWS services are available in all regions. When Amazon initially launches a new service, it doesn’t get immediately published in all the regions. They start small and then slowly expand to other regions. So, if you don’t see a specific service in your region, chances are the service hasn’t been published in your region yet. However, if you want to get the service that is not available, you can switch to the nearest region that provides the services.
 
+13. How do you set up a system to monitor website metrics in real-time in AWS?
+Amazon CloudWatch helps you to monitor the application status of various AWS services and custom events. It helps you to monitor:
 
+State changes in Amazon EC2
+Auto-scaling lifecycle events
+Scheduled events
+AWS API calls
+Console sign-in events
+amazon cloud watch
 
+14. What are the different types of virtualization in AWS, and what are the differences between them?
+The three major types of virtualization in AWS are: 
 
+Hardware Virtual Machine (HVM)
+It is a fully virtualized hardware, where all the virtual machines act separate from each other. These virtual machines boot by executing a master boot record in the root block device of your image.
+Paravirtualization (PV)
+Paravirtualization-GRUB is the bootloader that boots the PV AMIs. The PV-GRUB chain loads the kernel specified in the menu.
+Paravirtualization on HVM
+PV on HVM helps operating systems take advantage of storage and network I/O available through the host.
+15. Name some of the AWS services that are not region-specific
+AWS services that are not region-specific are:
 
+IAM
+Route 53
+Web Application Firewall 
+CloudFront
+16. What are the differences between NAT Gateways and NAT Instances?
+While both NAT Gateways and NAT Instances serve the same function, they still have some key differences.
 
+Differences
+
+17. What is CloudWatch?
+The Amazon CloudWatch has the following features:
+
+Depending on multiple metrics, it participates in triggering alarms.
+Helps in monitoring the AWS environments like CPU utilization, EC2, Amazon RDS instances, Amazon SQS, S3, Load Balancer, SNS, etc.
+18. What is an Elastic Transcoder?
+To support multiple devices with various resolutions like laptops, tablets, and smartphones, we need to change the resolution and format of the video. This can be done easily by an AWS Service tool called the Elastic Transcoder, which is a media transcoding in the cloud that exactly lets us do the needful. It is easy to use, cost-effective, and highly scalable for businesses and developers.
+
+AWS Interview Questions for Intermediate and Experienced
+19. With specified private IP addresses, can an Amazon Elastic Compute Cloud (EC2) instance be launched? If so, which Amazon service makes it possible?
+Yes. Utilizing VPC makes it possible (Virtual Private Cloud).
+
+20. Define Amazon EC2 regions and availability zones?
+Availability zones are geographically separate locations. As a result, failure in one zone has no effect on EC2 instances in other zones. When it comes to regions, they may have one or more availability zones. This configuration also helps to reduce latency and costs.
+
+21. Explain Amazon EC2 root device volume?
+The image that will be used to boot an EC2 instance is stored on the root device drive. This occurs when an Amazon AMI runs a new EC2 instance. And this root device volume is supported by EBS or an instance store. In general, the root device data on Amazon EBS is not affected by the lifespan of an EC2 instance.
+
+22. Mention the different types of instances in  Amazon EC2 and explain its features.
+General Purpose Instances: They are used to compute a range of workloads and aid in the allocation of processing, memory, and networking resources.
+Compute Optimized Instances: These are ideal for compute-intensive applications. They can handle  batch processing workloads, high-performance web servers, machine learning inference, and various other tasks.
+Memory Optimized: They process workloads that handle massive datasets in memory and deliver them quickly.
+Accelerated Computing: It aids in the execution of floating-point number calculations, data pattern matching, and graphics processing. These functions are carried out using hardware accelerators.
+Storage Optimised: They handle tasks that require sequential read and write access to big data sets on local storage.
+23. Will your standby RDS be launched in the same availability zone as your primary?
+No, standby instances are launched in different availability zones than the primary, resulting in physically separate infrastructures. This is because the entire purpose of standby instances is to prevent infrastructure failure. As a result, if the primary instance fails, the backup instance will assist in recovering all of the data.
+
+Advanced AWS Interview Questions and Answers
+24. What is the difference between a Spot Instance, an On-demand Instance, and a Reserved Instance?
+Spot instances are unused EC2 instances that users can use at a reduced cost.
+
+When you use on-demand instances, you must pay for computing resources without making long-term obligations.
+
+Reserved instances, on the other hand, allow you to specify attributes such as instance type, platform, tenancy, region, and availability zone. Reserved instances offer significant reductions and capacity reservations when instances in certain availability zones are used.
+
+25. How would you address a situation in which the relational database engine frequently collapses when traffic to your RDS instances increases, given that the RDS instance replica is not promoted as the master instance?
+A larger RDS instance type is required for handling significant quantities of traffic, as well as producing manual or automated snapshots to recover data if the RDS instance fails.
+
+26. What do you understand by 'changing' in Amazon EC2?
+To make limit administration easier for customers, Amazon EC2 now offers the option to switch from the current 'instance count-based limitations' to the new 'vCPU Based restrictions.' As a result, when launching a combination of instance types based on demand, utilization is measured in terms of the number of vCPUs.
+
+27. Define Snapshots in Amazon Lightsail?
+The point-in-time backups of EC2 instances, block storage drives, and databases are known as snapshots. They can be produced manually or automatically at any moment. Your resources can always be restored using snapshots, even after they have been created. 
+These resources will also perform the same tasks as the original ones from which the snapshots were made.
+
+28 -  On an EC2 instance, an application of yours is active. Once the CPU usage on your instance hits 80%, you must reduce the load on it.
+What strategy do you use to complete the task?
+
+It can be accomplished by setting up an autoscaling group to deploy additional instances, when an EC2 instance's CPU use surpasses 80% and by
+allocating traffic across instances via the creation of an application load balancer and the designation of EC2 instances as target instances.
+
+29 - What is auto-scaling?
+
+Auto-scaling is a function that allows you to provision and launch new instances whenever there is a demand. 
+It allows you to automatically increase or decrease resource capacity in relation to the demand.
+
+30 - What is load balancer and how it works? and types of load balancer
+
+A load balancer acts as the “traffic cop” sitting in front of your servers and routing client requests across all servers capable of fulfilling those requests 
+in a manner that maximizes speed and capacity utilization and ensures that no one server is overworked, which could degrade performance
+
+1- Network load balancer
+>>A load balancer serves as the single point of contact for clients. The load balancer distributes incoming traffic across multiple targets, such as Amazon EC2 instances.
+This increases the availability of your application. You add one or more listeners to your load balancer.
+
+>>it is an layer 4 in transpot layer 
+>>it is use or support all protocals
+rdp,ssh,http,https
+
+2- Application load balancer
+
+A load balancer serves as the single point of contact for clients. The load balancer distributes incoming application traffic across multiple targets, such as EC2 instances,
+in multiple Availability Zones. This increases the availability of your application
+
+>>it is layer 7 in application layer
+>>it uses only few protocals
+https,http
+
+31 - what is cross-zone load-balancer
+
+>>The nodes for your load balancer distribute requests from clients to registered targets. When cross-zone load balancing is enabled, each load balancer 
+node distributes traffic across the registered targets in all enabled Availability Zones
+
+32 - what is ssl-off loading or 
+
+>>SSL termination refers to the process of decrypting encrypted traffic before passing it along to a web server.
+            or
+>>An SSL connection sends encrypted data between an end-user's computer and web server by using a certificate for authentication. 
+SSL termination helps speed the decryption process and reduces the processing burden on backend servers
+
+33 - what is round-robin load balancer              -->video 17 40mins
+>>Round-robin DNS is a technique of load distribution, load balancing, or fault-tolerance provisioning multiple, redundant Internet Protocol service hosts, 
+e.g., Web server, FTP servers, by managing the Domain Name System's (DNS) responses to address requests from client computers according to an appropriate statistical model
+        or
+>>Round robin load balancing is a simple way to distribute client requests across a group of servers. A client request is forwarded to each server in turn.
+
+How does it works:
+>>What Is Round-Robin Load Balancing? Round‑robin load balancing is one of the simplest methods for distributing client requests across a group of servers. 
+Going down the list of servers in the group, the round‑robin load balancer forwards a client request to each server in turn.
+
+34 - what is the use of health checks in aws
+
+>>Health checks are a way of asking a service on a particular server whether or not it is capable of performing work successfully. 
+Load balancers ask each server this question periodically to determine which servers it is safe to direct traffic to.
+
+35 - Your business prefers to use its email address and domain to send and receive compliance emails. What service do you recommend to implement it easily and budget-friendly?
+
+>>This can be accomplished by using Amazon Simple Email Service (Amazon SES), a cloud-based   email-sending service.
+
+36 -
 
 
 
