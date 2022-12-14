@@ -167,12 +167,247 @@ Unattended execution can be easily done.
 Huge test matrices can be easily tested.
 Parallel execution is enabled.
 
-23 - 
+23 - what is infrastructure deployment
+
+two ways to build infrastructure deployment
+
+1-cloud native tools
+a)-aws    -->cloud formation  yaml or json uses
+b)-azure  -->arm templates
+code is heavy in aws and azure
+
+2-third party tools (terraform)
+>>hashicorp tool it is an open-souce
+>>it is famous it is easy to use and understand
+>>it support to all clouds
+>>terraform have idempotnce
+
+24-what is configuration mangement
+
+>>it is used to configure the servers or users any updates or use to regular operations
+
+tools:-
+1-chef
+2-puppet
+3-ansible
+4-rundeck
+5-salt
+
+=======================================GITHUB==================================================================================================
+
+1 - What is Git?
+Git is a version control system for tracking changes in computer files and is used to help coordinate work among several people on a project while
+tracking progress over time. In other words, it’s a tool that facilitates source code management in software development.
+
+Git favors both programmers and non-technical users by keeping track of their project files. It enables multiple users to work together and handles
+large projects efficiently.
+
+Advantgaes:-
+Faster release cycles
+Easy team collaboration
+Widespread acceptance 
+Maintains the integrity of source code
+Pull requests
+
+Benfites:-
+Data replication and redundancy are both possible.
+It is a service with high availability.
+There can only be one Git directory per repository.
+Excellent network and disc performance are achieved.
+On any project, collaboration is very simple.
+
+2 - What is GitHub?
+
+To provide Internet hosting for version control and software development, GitHub makes use of Git.
+
+3 - Mention some popular Git hosting services.
+
+GitHub
+SourceForge
+GitLab
+Bitbucket
+
+4 - Different types of version control systems
+
+Local version control systems have a database that stores all file changes under revision control on disc in a special format.
+Centralized version control systems have a single repository, from which each user receives their working copy.
+Distributed version control systems contain multiple repositories, and different users can access each one with their working copy.
+
+5 - What’s the difference between Git and GitHub?
+
+Git:-
+1-Git is a software
+2-Git can be installed locally on the system
+3-Provides a desktop interface called git GUI
+4-It does not support user management features
+
+github:-
+1-GitHub is a service
+2-GitHub is hosted on the web
+3-Provides a desktop interface called GitHub Desktop.
+4-Provides built-in user management
+
+6 - What is a Git repository?
+
+Git repository refers to a place where all the Git files are stored. These files can either be stored on the local repository or on the remote repository.
+
+7 - What does the git push command do?
+
+The Git push command is used to push the content in a local repository to a remote repository. After a local repository has been modified,
+a push is executed to share the modifications with remote team members.
+
+8 - What do you understand about the Git merge conflict?
+A Git merge conflict is an event that occurs when Git is unable to resolve the differences in code between the two commits automatically. 
+
+Git is capable of automatically merging the changes only if the commits are on different lines or branches.
+
+9 - how to solve merge conflicts
+>>Person A is the one who decides when to incorporate new changes from master, so Person A will perform the merge. Person A should certainly attempt to resolve merge conflicts on their own, 
+but if any questions arise then both Person A and Person B should sit together and resolve the conflicts together
+
+10 - what is merge and rebase
+>>Git merge is a command that allows you to merge branches from Git. Git rebase is a command that allows developers to integrate changes from one branch to another. 
+In Git Merge logs will be showing the complete history of the merging of commits.
+
+11 - what is the differnce between merge and rebase
+
+>>Merging is a safe option that preserves the entire history of your repository, while rebasing creates a linear history by moving your feature branch onto the tip of main 
+
+12 - what is rebase
+>>Rebasing is the process of moving or combining a sequence of commits to a new base commit. Rebasing is most useful and easily visualized in the context of a feature branching workflow.
+
+13 - what is the differnce between merge and pull request
+>>The git pull command first runs git fetch which downloads content from the specified remote repository. 
+Then a git merge is executed to merge the remote content refs and heads into a new local merge commit. 
+To better demonstrate the pull and merging process let us consider the following example.
+
+14 - what is git reset hard???
+>>Summary. To review, git reset is a powerful command that is used to undo local changes to the state of a Git repo. Git reset operates on "The Three Trees of Git". 
+These trees are the Commit History ( HEAD ), the Staging Index, and the Working Directory.
+                or
+>>git reset --hard , which will completely destroy any changes and remove them from the local directory.
+
+15 - what is git reset soft???
+>>git reset --soft , which will keep your files, and stage all changes back automatically
+
+16 - what is git stash
+>>git stash temporarily shelves (or stashes) changes you've made to your working copy so you can work on something else, and then come back and re-apply them later on.
+
+17 - Tell me the difference between git pull and git fetch?
+Both of these commands will fetch any new commits from the remote repository, but they differ in how they handle these commits.
+
+Git pull will merge the remote commits into the current branch, while git fetch will simply retrieve the commits and store them in the local repository. 
+This means that if you have any uncommitted changes, git pull may result in merge conflicts, while git fetch will not
+
+18 - Difference between “pull request” and “branch”?
+“Pull request” is done when you feel like changing the developer’s change to another person's code branch. And “Branch” is just a separate version of code
+
+19 - What is a branch in Git?
+A branch is a way to isolate development work on a particular aspect of a project. When a branch is created, it diverges from the primary branch. It allows 
+developers to work on a new feature or bug fix without affecting the main codebase.
+
+20 -  What is a commit in Git?
+A commit is a way to save changes to a branch. When a commit is made, a snapshot of the current state of the branch is created. 
+This snapshot can be used to revert the branch to that state if necessary.
+
+21 - what is trufflehog and how to use it
+>>Now, on to the more popularly used scanning tool — truffleHog. This GitHub repository scanner will look into your commit 
+history and spot anything that looks like a password or confidential information using regex and entropy.
+
+=======================================================Jenkins===========================================================================================
+                           
+1 - what is jenkins what will do jenkins and what is highly available jenkins
+
+>>Jenkins is an open-source automation tool written in Java with plugins built for continuous integration. Jenkins is used to build and test your 
+software projects continuously making it easier for developers to integrate changes to the project, and making it easier for users to obtain a fresh build.
+
+highly available jenkins:-
+>>All Jenkins instances within the Region can access the Amazon EFS file system and data durably stored in multiple Availability Zones. 
+If a single Availability Zone experiences an outage, the Jenkins file system is still accessible from other Availability Zones providing HA for the storage laye
+
+Why Jenkins is important?
+>>Jenkins is used today along the entire software development lifecycle, enabling the integration and automation of different processes, including building, testing, 
+and deployment. Jenkins creates 'pipelines', which define the series of steps that the server will take to perform the required tasks.
+
+>>jenkins is on open-source tool    (cloudbess is also a jenkins tools it is an enterprise level) 
+>>jenkins is ci/cd tool continoud integration and continous deployment and deliver 
+>>jenkins nothing can do without plugins
+>>jenkins works on java programming
+>>you can develop your own plugins and you can use that plugins
+
+2 - what language is used in jenkins pipeline
+
+>>Groovy programming language
+Pipelines are Jenkins jobs enabled by the Pipeline (formerly called “workflow”) plugin and built with simple text scripts that use a Pipeline DSL (domain-specific language)
+ based on the Groovy programming language
+
+3 - what is the use of jenkins slave 
+
+>>Slaves can run on a variety of operating systems. The job of a Slave is to do as they are told to, which involves executing build jobs dispatched by the Master
 
 
-=====GITHUB
+4 - what is on-demand-slave in jenkins
 
-1 - 
+>>Slaves are Jenkins agents it's used to execute jobs scheduled by the master. But there we need lots of different slaves with their respective tools. 
+For example, one slave is configured for maven to run a java application, one is for docker, and so on
+
+5 - How many slaves can Jenkins have?
+1-200 is the range you can get to without having to *heavily* tune GC or change some Jenkins hidden properties
+
+6 - what is role-based-access-control in jenkins
+
+>>The Role Strategy plugin is meant to be used from Jenkins to add a new role-based mechanism to manage users' permissions. Supported features. Creating global roles, 
+such as admin, job creator, anonymous, etc., allowing to set Overall, Agent, Job, Run, View and SCM permissions on a global basis
+
+7 - what is jenkins pipeline and types of pipeline
+
+>>In Jenkins, a pipeline is a collection of events or jobs which are interlinked with one another in a sequence. 
+It is a combination of plugins that support the integration and implementation of continuous delivery pipelines using Jenkins
+
+Types:-
+1-declartive
+2-scripted
+
+8 - what is the differnce between scripted pipeline and declartive pipeline
+
+>>Declarative: Declarative pipeline supports the Environment block. Environment block helps to define global variables and load credentials into the pipeline. 
+Scripted: The scripted pipeline does not support Environment block but you can define global variables and use credentials in a different way using Groovy.
+
+2-declartive pipeline
+>>we always preferd to use the declartive pipeline,bcoz of the advantages associated
+1-complete pipeline validation before executing
+2-if the pipeline is not good means if any syntax error means its not build the pipeline 
+like scripted will build to stop the stage like we converted 4 stages the syntax error 
+in 3 stage that stage will get an error in scripted pipeline
+3-restart at one particular stage.
+4-good when applying conditional statements when compared to scripted pipeline
+
+9 - do you worked on the multi-branch pipeline and use case of multi-branch pipeline
+
+>>yes i worked on multi-branch pipeline we have blue-ocean inplace, we are using blue-ocean  
+so that the blue-ocean give very good graphical representation to manage the multi-branch pipline
+we have like dev-env and prod-env when ever the commit is done it will be build 
+
+10 - what is the use of active directory in jenkins
+
+>>With this plugin, you can configure Jenkins to authenticate the username and the password through Active Directory. 
+This plugin internally uses two very different implementations, depending on whether Jenkins is running on Windows or non-Windows and if you specify a domain.
+
+11 - What is a CI/CD pipeline?
+CI/CD Pipeline or Continuous Integration/ Continuous Delivery is considered the DevOps approach's backbone. 
+The pipeline is responsible for building codes, running tests, and deploying new software versions.
+
+12 - Name some of the useful plugins in Jenkins.
+Some of the plugins in Jenkins include:
+
+Maven 2 project
+Amazon EC2
+Copy artifact
+Join
+HTML publisher
+Green Balls
+
+13 - 
 
 
 
@@ -180,9 +415,7 @@ Parallel execution is enabled.
 
 
 
-
-
-
+===========
 
 
 
