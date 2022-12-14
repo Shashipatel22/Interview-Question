@@ -1,3 +1,12 @@
+what IAAS and PAAS
+
+IAAS:-
+
+
+PAAS:-
+
+
+
 1 - Define and explain the three basic types of cloud services and the AWS products that are built based on them?
 
 >>The three basic types of cloud services are:
@@ -463,7 +472,62 @@ Load balancers ask each server this question periodically to determine which ser
 
 >>This can be accomplished by using Amazon Simple Email Service (Amazon SES), a cloud-based   email-sending service.
 
-36 -
+36 - Describe SES.
+
+Amazon offers the Simple Email Service (SES) service, which allows you to send bulk emails to customers swiftly at a minimal cost.
+
+37 - How many S3 buckets can be created?
+
+Up to 100 buckets can be created by default
+
+38 - What is the maximum limit of elastic IPs anyone can produce?
+
+A maximum of five elastic IP addresses can be generated per location and AWS account.
+
+39 - What are the different types of EC2 instances based on their costs?
+The three types of EC2 instances are:
+
+On-demand Instance
+It is cheap for a short time but not when taken for the long term
+Spot Instance
+It is less expensive than the on-demand instance and can be bought through bidding. 
+Reserved Instance
+If you are planning to use an instance for a year or more, then this is the right one for you
+
+40 - What is Amazon EC2?
+EC2 is short for Elastic Compute Cloud, and it provides scalable computing capacity. Using Amazon EC2 eliminates the need to invest in hardware, 
+leading to faster development and deployment of applications.You can use Amazon EC2 to launch as many or as few virtual servers as needed, configure security and networking, and manage storage. 
+It can scale up or down to handle changes in requirements, reducing the need to forecast traffic. EC2 provides virtual computing environments called “instances.”
+
+41 - What Are Some of the Security Best Practices for Amazon EC2?
+Security best practices for Amazon EC2 include using Identity and Access Management (IAM) to control access to AWS resources; restricting access by only allowing trusted hosts or networks 
+to access ports on an instance; only opening up those permissions you require, and disabling password-based logins for instances launched from your AMI.
+
+42 - Can S3 Be Used with EC2 Instances, and If Yes, How?
+
+Amazon S3 can be used for instances with root devices backed by local instance storage. That way, developers have access to the same highly scalable, reliable, fast,
+inexpensive data storage infrastructure that Amazon uses to run its own global network of websites. To execute systems in the Amazon EC2 environment, 
+developers load Amazon Machine Images (AMIs) into Amazon S3 and then move them between Amazon S3 and Amazon EC2.
+
+Amazon EC2 and Amazon S3 are two of the best-known web services that make up AWS
+
+43 -  What are the common types of AMI designs?
+There are many types of AMIs, but some of the common AMIs are:
+
+Fully Baked AMI
+Just Enough Baked AMI (JeOS AMI)
+Hybrid AMI
+
+44 - What are Key-Pairs in AWS?
+
+The Key-Pairs are password-protected login credentials for the Virtual Machines that are used to prove our identity while connecting the Amazon EC2 instances.
+The Key-Pairs are made up of a Private Key and a Public Key which lets us connect to the instances.
+
+45 - What is Amazon S3? 
+
+S3 is short for Simple Storage Service, and Amazon S3 is the most supported storage platform available. S3 is object storage that can store and retrieve any amount of data from anywhere.
+Despite that versatility, it is practically unlimited as well as cost-effective because it is storage available on demand. In addition to these benefits, it offers unprecedented levels of durability and availability. Amazon S3 helps to manage data for cost optimization, access control, and compliance. 
+
 
 
 
