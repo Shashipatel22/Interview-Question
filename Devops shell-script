@@ -34,13 +34,74 @@ Docker:- Docker is a high-end DevOps tool that allows building, ship, and run di
 Git:- Git is an open-source distributed version control system that is freely available for everyone. It is designed to handle minor to major
 projects with speed and efficiency.
 
+5 - What are the prerequisites for the DevOps implementation?
+Following are some useful prerequisites for DevOps implementation:
+
+Proper communication between the team members.
+At least one version control software.
+Automated testing.
+Automated deployment.
+
+6 - What are the different phases in DevOps?
+The various phases of the DevOps lifecycle are as follows:
+
+Plan - Initially, there should be a plan for the type of application that needs to be developed. Getting a rough picture of the development process is always a good idea.
+Code - The application is coded as per the end-user requirements. 
+Build - Build the application by integrating various codes formed in the previous steps.
+Test - This is the most crucial step of the application development. Test the application and rebuild, if necessary.
+Integrate - Multiple codes from different programmers are integrated into one.
+Deploy - Code is deployed into a cloud environment for further usage. It is ensured that any new changes do not affect the functioning of a high traffic website.
+Operate - Operations are performed on the code if required.
+Monitor - Application performance is monitored. Changes are made to meet the end-user requirements.
+
+7 - What are the key components of DevOps?
+The most important key components of DevOps are:
+
+Continuous integration
+Continuous testing
+Continuous delivery
+Continuous mongering
+
+8 - Mention some of the core benefits of DevOps.
+The core benefits of DevOps are as follows:
+
+Technical benefits
+Continuous software delivery
+Less complex problems to manage
+Early detection and faster correction of defects
+Business benefits
+Faster delivery of features
+Stable operating environments
+Improved communication and collaboration between the teams
+
+9 - How is DevOps different from agile methodology?
+DevOps is a culture that allows the development and the operations team to work together. This results in continuous development, testing, integration, 
+deployment, and monitoring of the software throughout the lifecycle. 
+
+10 - What are the fundamental differences between DevOps & Agile?
+
+>>DevOps is a culture, fostering collaboration amongst all participants involved in the development and maintenance of software. 
+Agile can be described as a development methodology designed to maintain productivity and drive releases with the common reality of changing needs.
+
+11 - what is continous delivery and continous deployment 
+
+---Continous delivery
+>>Continuous delivery is a software development practice that uses automation to speed the release of new code. It establishes a process through which a developer's 
+changes to an application can be pushed to a code repository or container registry through automation
+
+---Continous deployment
+>>Continuous deployment (CD, or CDE) is a strategy or methodology for software releases where any new code update or change made through the rigorous automated test 
+process is deployed directly into the live production environment, where it will be visible to customers.
 
 
+12 - What is the difference between continuous delivery and continuous deployment?
 
+>>The difference between continuous delivery and continuous deployment is the presence of a manual approval to update to production. 
+With continuous deployment, production happens automatically without explicit approval. Continuous delivery automates the entire software release process
 
+=====GITHUB
 
-
-
+1 - 
 
 
 
