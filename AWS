@@ -50,6 +50,8 @@ and have AWS CloudFormation use those templates for quick and reliable provision
 >>Save the code in an S3 bucket, which serves as a repository for the code.
 >>Use AWS CloudFormation to call the bucket and create a stack on your template
 
+6 - what is clouf-formation designer
+
 6 - what JSON
 JavaScript Object Notation (JSON)
 >>It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, 
