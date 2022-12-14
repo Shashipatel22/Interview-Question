@@ -58,6 +58,8 @@ and have AWS CloudFormation use those templates for quick and reliable provision
 
 9 - what is stack policy in cloud-formation
 
+10 - what is detect drift in cloud-formation
+
 10 - what is roolback failure in cloud-formation
 
 >>roll-back failure is must be enable. when your deploying code using cloud-formation if gets an error then automatically delete the everything what is deployed in cloud-formation 
