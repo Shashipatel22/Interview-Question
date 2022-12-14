@@ -52,6 +52,12 @@ and have AWS CloudFormation use those templates for quick and reliable provision
 
 6 - what is clouf-formation designer
 
+7 - what is stackset in cloud-formation
+
+8 - what is drifting in cloud-formation
+
+9 - what is stack policy in cloud-formation
+
 6 - what JSON
 JavaScript Object Notation (JSON)
 >>It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, 
