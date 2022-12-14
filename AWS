@@ -39,9 +39,16 @@ and have AWS CloudFormation use those templates for quick and reliable provision
 >we can use this template to create the services we can use this code to version control and if we can modify the code we can easily undesrstand
 >>aws cloud-formation uses YAML and JSON lanugauge
 
-6 - 
+6 - what JSON
+JavaScript Object Notation (JSON)
+>>It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, 
+so it can be displayed on a web page, or vice versa).
 
+7 - what is YAML
 
+>>YAML is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted
+
+8 - 
 
 
 
