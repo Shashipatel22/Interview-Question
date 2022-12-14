@@ -463,6 +463,12 @@ How does it works:
 >>What Is Round-Robin Load Balancing? Round‑robin load balancing is one of the simplest methods for distributing client requests across a group of servers. 
 Going down the list of servers in the group, the round‑robin load balancer forwards a client request to each server in turn.
 
+34 - what is target group in load balancer
+>>collections of machines and also port
+         or
+>>A target group tells a load balancer where to direct traffic to : EC2 instances, fixed IP addresses; or AWS Lambda functions, amongst others. When creating a load balancer, 
+you create one or more listeners and configure listener rules to direct the traffic to one target group
+
 34 - what is the use of health checks in aws
 
 >>Health checks are a way of asking a service on a particular server whether or not it is capable of performing work successfully. 
@@ -527,6 +533,48 @@ The Key-Pairs are made up of a Private Key and a Public Key which lets us connec
 
 S3 is short for Simple Storage Service, and Amazon S3 is the most supported storage platform available. S3 is object storage that can store and retrieve any amount of data from anywhere.
 Despite that versatility, it is practically unlimited as well as cost-effective because it is storage available on demand. In addition to these benefits, it offers unprecedented levels of durability and availability. Amazon S3 helps to manage data for cost optimization, access control, and compliance. 
+
+>>we can store log files 
+>>maximum uploading one file size upto 5TB
+>>it is global unique name
+>>you can upload files 3types 1 - cli and 2 - aws console 3 - application through api or jenkins
+>>mostly upload through api or applcation through
+>>s3 bucket is not global why meanswhen you creating a buckrt its ask region but it will show all the regions
+>>s3 availbilty is 99.9 uptime
+>>s3 durability is 99.999999 it will not gone delete 
+>>when you uploading a file it will save in 3 az but it will not show that saving
+>>it will charge when you uploading and storage and when you accessing through internet will cost 
+>>you can enable version control
+
+---storage types
+>>if frequently using data means use this (standard)
+>>if we can't access frequently that's a old data we can use this (standar, glacier)
+>>temporary log files you can use this (One Zone-IA)
+
+44 - what is S3 Replication
+
+>>transfer the data one bucket to another bucket
+>>craete bucket anji256 on that time you should enable the replication
+>>it is use gor mostly log-purpose of saving
+
+===how to add replication
+>>click on add rule >>enable version
+>>select bucket anji159
+>>select the storage type glacier or anything
+>>click on next done
+
+>>if you upload data in the bucket of anji256 the data will save in the bucket of anji159
+
+45 - what is Glacier
+
+>>s3 glacier cheap storage
+>>for longterm backup we can use this
+>>if you stored data in glacier if retriving it  will charge it's not for regular purpose 
+its for longterm
+>>you can take glacier backup using third-party tools fast glacier, altro, vertias,netbackup,networker,Aavamar,Tivoli
+>>glacier is called vault
+
+46 - 
 
 
 
