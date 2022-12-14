@@ -245,23 +245,8 @@ As a result, when launching a combination of instance types based on demand, uti
 
 28 - Define Snapshots in Amazon Lightsail?
 
->>Top 100+ AWS Interview Questions and Answers for 2023
-Lesson 13 of 14By Shyamli Jha
-
-Last updated on Nov 29, 2022141039591
-Top 100+ AWS Interview Questions and Answers [Updated]
-PreviousNext
-Table of Contents
-Basic AWS Interview QuestionsAWS Interview Questions for Intermediate and ExperiencedAdvanced AWS Interview Questions and AnswersAWS Scenario-based QuestionsTechnical and Non-Technical AWS Interview QuestionsView More
-Today’s modern world is witnessing a significant change in how businesses and organizations work. Everything is getting digitized, and the introduction of cloud and cloud computing platforms have been a major driving force behind this growth. Today, most businesses are using or are planning to use cloud computing for many of their operations, which consequently has led to a massive surge in the need for cloud professionals. 
-
-If you are interested in a career in the cloud industry, your chance has arrived. With cloud computing platforms like AWS taking the present business scenarios by storm, getting trained and certified in that particular platform can provide you with great career prospects. 
-
-But in order to get your AWS career started, you need to set up some AWS interviews and ace them. In the spirit of doing that, here are some AWS interview questions and answers that will help you with the interview process. There are a number of different AWS-related questions covered in this article, ranging from basic to advanced, and scenario-based questions as well.
-
+>
  
-
-Basic AWS Interview Questions
 1. Define and explain the three basic types of cloud services and the AWS products that are built based on them?
 The three basic types of cloud services are:
 
@@ -301,6 +286,7 @@ CloudFormation reads the file and understands the services that are called, thei
 
 Master's Program: AWS Cloud Architect
 Become an Expert in Amazon Web ServicesENROLL NOWMaster's Program: AWS Cloud Architect
+
 6. How do you upgrade or downgrade a system with near-zero downtime?
 You can upgrade or downgrade a system with near-zero downtime using the following steps of migration:
 
@@ -325,6 +311,7 @@ AWS Budgets
 This allows you to plan a budget for the services. Also, it will enable you to check if the current plan meets your budget and the details of how you use the services.
 Cost Allocation Tags
 This helps in identifying the resource that has cost more in a particular month. It lets you organize your resources and cost allocation tags to keep track of your AWS costs.
+
 8. Is there any other alternative tool to log into the cloud environment other than console?
 The that can help you log into the AWS resources are:
 
@@ -401,6 +388,7 @@ The Amazon CloudWatch has the following features:
 
 Depending on multiple metrics, it participates in triggering alarms.
 Helps in monitoring the AWS environments like CPU utilization, EC2, Amazon RDS instances, Amazon SQS, S3, Load Balancer, SNS, etc.
+
 18. What is an Elastic Transcoder?
 To support multiple devices with various resolutions like laptops, tablets, and smartphones, we need to change the resolution and format of the video. This can be done easily by an AWS Service tool called the Elastic Transcoder, which is a media transcoding in the cloud that exactly lets us do the needful. It is easy to use, cost-effective, and highly scalable for businesses and developers.
 
@@ -420,10 +408,7 @@ Compute Optimized Instances: These are ideal for compute-intensive applications.
 Memory Optimized: They process workloads that handle massive datasets in memory and deliver them quickly.
 Accelerated Computing: It aids in the execution of floating-point number calculations, data pattern matching, and graphics processing. These functions are carried out using hardware accelerators.
 Storage Optimised: They handle tasks that require sequential read and write access to big data sets on local storage.
-23. Will your standby RDS be launched in the same availability zone as your primary?
-No, standby instances are launched in different availability zones than the primary, resulting in physically separate infrastructures. This is because the entire purpose of standby instances is to prevent infrastructure failure. As a result, if the primary instance fails, the backup instance will assist in recovering all of the data.
 
-Advanced AWS Interview Questions and Answers
 24. What is the difference between a Spot Instance, an On-demand Instance, and a Reserved Instance?
 Spot instances are unused EC2 instances that users can use at a reduced cost.
 
@@ -607,14 +592,97 @@ its for longterm
 >>you can take glacier backup using third-party tools fast glacier, altro, vertias,netbackup,networker,Aavamar,Tivoli
 >>glacier is called vault
 
-46 - 
+46 - what is EFS and what is the use case of it
 
+>>EFS is a file storage service for use with Amazon compute (EC2, containers, serverless) and on-premises servers. 
+EFS provides a file system interface, file system access semantics (such as strong consistency and file locking), and concurrently accessible storage 
+for up to thousands of EC2 instances
 
+uses cases:-
+>>you can directly mount the system to ec2 instances
+>>it is a share folder for network in a region
+>>it is network file system  
+>>it is unix or linux supported
+>>it can shared between multiple servers and multiple regions
+>>the storage limit 8PB
 
+47 - what EBS Volumes
 
+>>Amazon Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances. 
+EBS volumes behave like raw, unformatted block devices. You can mount these volumes as devices on your instances
 
+disadvantages:-
+>>ebs volume yo can apply only one ec2 system
+>>ebs volume yo can apply only one ec2 system and it should be same availbility zone
+>>it is only for linux
 
+advantages:-
+>>you can diretly mount to the system 
+>>it can shared between multiple servers and multiple availbility zones
 
+49 - what is AWS Backup
+
+>>your specify the some of the resource in aws to take backup on AWS Backup service
+>>its nothing but snapshots
+
+50 - what is storage gateway and types
+
+>>You can use Storage Gateway to simplify storage management and reduce costs for key hybrid cloud storage use cases. 
+These include moving backups to the cloud, using on-premises file shares backed by cloud storage, and providing low-latency access to 
+data in AWS for on-premises applications.
+
+>>volume-gateway:- Volume Gateways allow you to have point-in-time backups of your volumes stored as EBS snapshots, and come in two different operational modes: stored and cached. 
+Stored volumes make your entire data available locally on the gateway, while maintaining an asynchronous copy in the S3 bucket
+
+>>Uses:-
+
+>>Storage-gateway:- You can use Storage Gateway to simplify storage management and reduce costs for key hybrid cloud storage use cases. These include moving backups to the cloud, 
+using on-premises file shares backed by cloud storage, and providing low-latency access to data in AWS for on-premises applications
+
+>>Tape-gateway:-Tape Gateway enables you to replace using physical tapes on premises with virtual tapes in AWS without 
+changing existing backup workflows. Tape Gateway supports all leading backup applications and caches virtual tapes on premises for low-latency data access
+
+50 - how many types of backup
+
+>>two types
+1-automatic
+two types
+a-daily backup
+b-transactionlogs
+2-snapshots
+
+54 - What is RDS AWS used for?
+Amazon Relational Database Service (RDS) is a managed SQL database service provided by Amazon Web Services (AWS). 
+Amazon RDS supports an array of database engines to store and organize data. It also helps with relational database management tasks, 
+such as data migration, backup, recovery and patching.
+
+55 -rds database tpes
+1-master(primary)
+2-read(secondary)replica       -->you can create read replica
+>>some tester has come and asked we have test the rds your not giving the primary you dont
+know how to access the secondary that time you can use the read replica
+>>read replica just copy a primary you can put another region also
+
+>>in read replica you can't do write on database its only read option
+
+53 - how many days take AWS-backup can retrive
+
+>>minimum 35 days
+
+23. Will your standby RDS be launched in the same availability zone as your primary?
+No, standby instances are launched in different availability zones than the primary, resulting in physically separate infrastructures. This is because the entire purpose of standby instances is to prevent infrastructure failure. As a result, if the primary instance fails, the backup instance will assist in recovering all of the data.
+
+51 - what is lambda and what is use of lambda
+
+>>Lambda runs your code on high availability compute infrastructure and performs all the administration of your compute resources. This includes server and operating system maintenance, 
+capacity provisioning and automatic scaling, code and security patch deployment, and code monitoring and logging.
+
+52 - What is Inspector in AWS
+
+>>Amazon Inspector is an automated vulnerability management service that continually scans AWS workloads for software vulnerabilities and unintended network exposure.
+
+53 - what is the rds failover time
+>>60-120 seconds
 
 
 
