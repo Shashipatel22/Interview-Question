@@ -1,5 +1,19 @@
-1 - What is devops 
+1 - Define and explain the three basic types of cloud services and the AWS products that are built based on them?
+The three basic types of cloud services are:
 
+Computing
+Storage
+Networking
+Here are some of the AWS products that are built based on the three cloud service types:
 
+Computing - These include EC2, Elastic Beanstalk, Lambda, Auto-Scaling, and Lightsat.
 
-2 - what 
+Storage - These include S3, Glacier, Elastic Block Storage, Elastic File System.
+
+Networking - These include VPC, Amazon CloudFront, Route53
+
+2 - What is the relation between the Availability Zone and Region?
+
+AWS regions are separate geographical areas, like the US-West 1 (North California) and Asia South (Mumbai). On the other hand, availability zones
+are the areas that are present inside the regions. These are generally isolated zones that can replicate themselves whenever required.
+
