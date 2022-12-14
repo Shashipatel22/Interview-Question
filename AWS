@@ -61,8 +61,8 @@ so it can be displayed on a web page, or vice versa).
 
 8 - what is virtual machines
 
->>In computing, a virtual machine is the virtualization/emulation of a computer system. Virtual machines are based on computer architectures and provide functionality of a physical computer.
-Their implementations may involve specialized hardware, software, or a combination
+>>In computing, a virtual machine is the virtualization/emulation of a computer system. virtual machine software can run programs and operating systems, store data, connect
+to networks and doother computing functions and reuires maintenance such as updates and system montoring
 
 9 - what is VPC
 
