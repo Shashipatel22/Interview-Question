@@ -634,8 +634,6 @@ data in AWS for on-premises applications.
 >>volume-gateway:- Volume Gateways allow you to have point-in-time backups of your volumes stored as EBS snapshots, and come in two different operational modes: stored and cached. 
 Stored volumes make your entire data available locally on the gateway, while maintaining an asynchronous copy in the S3 bucket
 
->>Uses:-
-
 >>Storage-gateway:- You can use Storage Gateway to simplify storage management and reduce costs for key hybrid cloud storage use cases. These include moving backups to the cloud, 
 using on-premises file shares backed by cloud storage, and providing low-latency access to data in AWS for on-premises applications
 
@@ -655,6 +653,9 @@ b-transactionlogs
 Amazon Relational Database Service (RDS) is a managed SQL database service provided by Amazon Web Services (AWS). 
 Amazon RDS supports an array of database engines to store and organize data. It also helps with relational database management tasks, 
 such as data migration, backup, recovery and patching.
+
+53 - what is the rds failover time
+>>60-120 seconds
 
 55 -rds database tpes
 1-master(primary)
@@ -681,9 +682,9 @@ capacity provisioning and automatic scaling, code and security patch deployment,
 
 >>Amazon Inspector is an automated vulnerability management service that continually scans AWS workloads for software vulnerabilities and unintended network exposure.
 
-53 - what is the rds failover time
->>60-120 seconds
-
+59 - what is AWS Service Catalog
+>>AWS Service Catalog enables organizations to create and manage catalogs of IT services that are approved for AWS. 
+These IT services can include everything from virtual machine images, servers, software, databases, and more to complete multi-tier application architectures
 
 
 
