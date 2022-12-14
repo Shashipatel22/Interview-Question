@@ -38,6 +38,8 @@ and have AWS CloudFormation use those templates for quick and reliable provision
 
 >we can use this template to create the services we can use this code to version control and if we can modify the code we can easily undesrstand
 >>aws cloud-formation uses YAML and JSON lanugauge
+>>Save the code in an S3 bucket, which serves as a repository for the code.
+>>Use AWS CloudFormation to call the bucket and create a stack on your template
 
 6 - what JSON
 JavaScript Object Notation (JSON)
@@ -48,7 +50,176 @@ so it can be displayed on a web page, or vice versa).
 
 >>YAML is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted
 
-8 - 
+8 - what is virtual machines
+
+>>In computing, a virtual machine is the virtualization/emulation of a computer system. Virtual machines are based on computer architectures and provide functionality of a physical computer.
+Their implementations may involve specialized hardware, software, or a combination
+
+9 - what is VPC
+
+>>Amazon Virtual Private Cloud (Amazon VPC) gives you full control over your virtual networking environment, including resource placement, connectivity, and security.
+Get started by setting up your VPC in the AWS service console
+
+Amazon VPC offers two different types of endpoints: gateway type endpoints and interface type endpoints.
+
+10 - what is hostname resolution 
+
+>>HostName resolution is the process of associating names and IP addresses, and it's one of the most essential services on a network. 
+People understand descriptive names, but network communications require difficult-to-remember addresses
+
+11 - what is fqdn
+
+>>A fully qualified domain name (FQDN) is the complete domain name for a specific computer, or host, on the internet. 
+The FQDN consists of two parts: the hostname and the domain name. For example, an FQDN for a hypothetical mail server 
+might be mymail.somecollege.edu
+
+12 - Is there any other alternative tool to log into the cloud environment other than console?
+
+Putty
+AWS CLI for Linux
+AWS CLI for Windows
+AWS CLI for Windows CMD
+AWS SDK
+Eclipse
+
+13 - What services can be used to create a centralized logging solution?
+
+>>The essential services that you can use are Amazon CloudWatch Logs, store them in Amazon S3, and then use Amazon Elastic Search to visualize them.
+You can use Amazon Kinesis Firehose to move the data from Amazon S3 to Amazon ElasticSearch.
+
+14 - What are the native AWS Security logging capabilities?
+
+>>Most of the AWS services have their logging options. Also, some of them have an account level logging, like in AWS CloudTrail, AWS Config, and others.
+Let’s take a look at two services in specific:
+
+1-AWS CloudTrail
+2-AWS Config
+
+15 - What is a DDoS attack, and what services can minimize them?
+
+>>DDoS is a cyber-attack in which the perpetrator accesses a website and creates multiple sessions so that the other legitimate users cannot access the service.
+The native tools that can help you deny the DDoS attacks on your AWS services are:
+
+AWS Shield
+AWS WAF
+Amazon Route53
+Amazon CloudFront
+ELB
+VPC
+
+16 - You are trying to provide a service in a particular region, but you do not see the service in that region. Why is this happening, and how do you fix it?
+
+>>Not all Amazon AWS services are available in all regions. When Amazon initially launches a new service, it doesn’t get immediately published in all the regions. 
+They start small and then slowly expand to other regions. So, if you don’t see a specific service in your region, chances are the service hasn’t been published in your region yet. 
+However, if you want to get the service that is not available, you can switch to the nearest region that provides the services
+
+17 - What are the different types of virtualization in AWS, and what are the differences between them?
+
+>>Hardware Virtual Machine (HVM)
+It is a fully virtualized hardware, where all the virtual machines act separate from each other. These virtual machines boot by executing a master boot record 
+in the root block device of your image.
+>>Paravirtualization (PV)
+Paravirtualization-GRUB is the bootloader that boots the PV AMIs. The PV-GRUB chain loads the kernel specified in the menu.
+>>Paravirtualization on HVM
+PV on HVM helps operating systems take advantage of storage and network I/O available through the host.
+
+18 - Name some of the AWS services that are not region-specific
+
+>>AWS services that are not region-specific are:
+
+IAM
+Route 53
+Web Application Firewall 
+CloudFront
+
+19 - What are the differences between NAT Gateways and NAT Instances?
+
+NAT-gateway: -NAT Gateway is a highly available AWS managed service that makes it easy to connect to the Internet from instances within a private subnet in an Amazon Virtual Private Cloud (Amazon VPC). 
+Previously, you needed to launch a NAT instance to enable NAT for instances in a private subnet.
+
+differnece:-
+1 - nat gateway managed by aws 
+2 - nat gateway canot assigned security groups
+3 - nat gateway highly availble
+4 - nat gateway bandwidth is upto 45 mbps
+5 - nat gateway perfomance is good
+
+NAT-A NAT (Network Address Translation) instance is, like a bastion host, an EC2 instance that lives in your public subnet. A NAT instance, however, allows your private instances outgoing connectivity
+to the internet while at the same time blocking inbound traffic from the internet
+
+differnece:-
+1 - nat instance managed by you
+2 - nat instance can assignes security groups
+3 - nat instance is also highly availble
+4 - nat instance bandwidth is depends on instnace bandwidth
+5 - nat instance performance compared to nat gateway is average
+
+20 - what is authentication and authriozation
+
+>>authentication your accessing or login into the applicatio or portal entry only
+
+>>authrozation is nothing but you should be assign some roles are features
+
+21 - Define Amazon EC2 regions and availability zones?
+
+>>Availability zones are geographically separate locations. As a result, failure in one zone has no effect on EC2 instances in other zones. When it comes to regions, they may have one or more availability zones.
+This configuration also helps to reduce latency and costs
+
+22 - Explain Amazon EC2 root device volume?
+
+>>The image that will be used to boot an EC2 instance is stored on the root device drive. This occurs when an Amazon AMI runs a new EC2 instance. And this root device volume is supported by EBS or an instance store. 
+In general, the root device data on Amazon EBS is not affected by the lifespan of an EC2 instance
+
+23 - Mention the different types of instances in  Amazon EC2 and explain its features.
+
+>>General Purpose Instances: They are used to compute a range of workloads and aid in the allocation of processing, memory, and networking resources.
+>>Compute Optimized Instances: These are ideal for compute-intensive applications. They can handle  batch processing workloads, high-performance web servers, machine learning inference, and various other tasks
+>>Memory Optimized: They process workloads that handle massive datasets in memory and deliver them quickly.
+>>Accelerated Computing: It aids in the execution of floating-point number calculations, data pattern matching, and graphics processing. These functions are carried out using hardware accelerators.
+>>Storage Optimised: They handle tasks that require sequential read and write access to big data sets on local storage
+
+24 - Will your standby RDS be launched in the same availability zone as your primary?
+
+>>No, standby instances are launched in different availability zones than the primary, resulting in physically separate infrastructures. This is because the entire purpose of standby instances is to prevent infrastructure failure.
+As a result, if the primary instance fails, the backup instance will assist in recovering all of the data
+
+25 - What is the difference between a Spot Instance, an On-demand Instance, and a Reserved Instance?
+
+>>Spot instances are unused EC2 instances that users can use at a reduced cost.
+
+>>When you use on-demand instances, you must pay for computing resources without making long-term obligations.
+
+Reserved instances, on the other hand, allow you to specify attributes such as instance type, platform, tenancy, region, and availability zone. 
+Reserved instances offer significant reductions and capacity reservations when instances in certain availability zones are used.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
