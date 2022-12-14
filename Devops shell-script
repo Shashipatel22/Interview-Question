@@ -4,7 +4,19 @@
 It allows a single team to handle the entire application lifecycle, from development to testing, deployment, and operations. 
 DevOps helps you to reduce the disconnection between software developers, quality assurance (QA) engineers, and system administrators.
 
-2 - What are the principles of DevOps?
+2 - Why has DevOps become famous?
+As we know before DevOps there are two other software development models:
+
+Waterfall model
+Agile model
+In the waterfall model, we have limitations of one-way working and lack of communication with customers. This was overcome in Agile by including
+the communication between the customer and the company by taking feedback. But in this model, another issue is faced regarding communication between 
+the Development team and operations team due to which there is a delay in the speed of production. This is where DevOps is introduced. It bridges the 
+gap between the development team and the operation team by including the automation feature. Due to this, the speed of production is increased. 
+By including automation, testing is integrated into the development stage. Which resulted in finding the bugs at the very initial stage which increased 
+the speed and efficiency.
+
+3 - What are the principles of DevOps?
 The principles behind DevOps are:
 
 Continuous deployment
@@ -13,11 +25,11 @@ Automation
 Monitoring
 Security
 
-3 - How DevOps is helpful to developers?
+4 - How DevOps is helpful to developers?
 DevOps is very helpful for developers to fix the bugs and quickly implement the new features. It also helps in more transparent communication 
 between the team members.
 
-4 - Explain some popular tools of DevOps?
+5 - Explain some popular tools of DevOps?
 Here are some popular tools of DevOps, such as:
 
 Jenkins:- Jenkins is a DevOps tool for monitoring the execution of repeated tasks. Jenkins is a software that allows continuous integration. 
@@ -34,7 +46,7 @@ Docker:- Docker is a high-end DevOps tool that allows building, ship, and run di
 Git:- Git is an open-source distributed version control system that is freely available for everyone. It is designed to handle minor to major
 projects with speed and efficiency.
 
-5 - What are the prerequisites for the DevOps implementation?
+6 - What are the prerequisites for the DevOps implementation?
 Following are some useful prerequisites for DevOps implementation:
 
 Proper communication between the team members.
@@ -42,7 +54,7 @@ At least one version control software.
 Automated testing.
 Automated deployment.
 
-6 - What are the different phases in DevOps?
+7 - What are the different phases in DevOps?
 The various phases of the DevOps lifecycle are as follows:
 
 Plan - Initially, there should be a plan for the type of application that needs to be developed. Getting a rough picture of the development process is always a good idea.
@@ -54,7 +66,7 @@ Deploy - Code is deployed into a cloud environment for further usage. It is ensu
 Operate - Operations are performed on the code if required.
 Monitor - Application performance is monitored. Changes are made to meet the end-user requirements.
 
-7 - What are the key components of DevOps?
+8 - What are the key components of DevOps?
 The most important key components of DevOps are:
 
 Continuous integration
@@ -62,7 +74,7 @@ Continuous testing
 Continuous delivery
 Continuous mongering
 
-8 - Mention some of the core benefits of DevOps.
+9 - Mention some of the core benefits of DevOps.
 The core benefits of DevOps are as follows:
 
 Technical benefits
@@ -74,16 +86,16 @@ Faster delivery of features
 Stable operating environments
 Improved communication and collaboration between the teams
 
-9 - How is DevOps different from agile methodology?
+10 - How is DevOps different from agile methodology?
 DevOps is a culture that allows the development and the operations team to work together. This results in continuous development, testing, integration, 
 deployment, and monitoring of the software throughout the lifecycle. 
 
-10 - What are the fundamental differences between DevOps & Agile?
+11 - What are the fundamental differences between DevOps & Agile?
 
 >>DevOps is a culture, fostering collaboration amongst all participants involved in the development and maintenance of software. 
 Agile can be described as a development methodology designed to maintain productivity and drive releases with the common reality of changing needs.
 
-11 - what is continous delivery and continous deployment 
+12 - what is continous delivery and continous deployment 
 
 ---Continous delivery
 >>Continuous delivery is a software development practice that uses automation to speed the release of new code. It establishes a process through which a developer's 
@@ -94,10 +106,69 @@ changes to an application can be pushed to a code repository or container regist
 process is deployed directly into the live production environment, where it will be visible to customers.
 
 
-12 - What is the difference between continuous delivery and continuous deployment?
+13 - What is the difference between continuous delivery and continuous deployment?
 
 >>The difference between continuous delivery and continuous deployment is the presence of a manual approval to update to production. 
 With continuous deployment, production happens automatically without explicit approval. Continuous delivery automates the entire software release process
+
+14 - Which scripting tools are used in DevOps?
+
+>>Both Python and Ruby scripting tools are used in the DevOps.
+
+15 - Why open source tools boost DevOps?
+
+>>Open source tools mainly used by any organization which is adapted by DevOps pipeline because DevOps came with the focus of automation 
+in various aspects of organization build, release, change management, and infrastructure management areas.
+
+16 - What is the role of AWS in DevOps?
+
+>>AWS is a cloud-based service provided by Amazon that ensures scalability through unlimited computing power and storage. 
+It empowers IT enterprises to develop and deliver experienced products and deploy applications on the cloud
+
+17 - Explain two-factor authentication?
+The two-factor authentication is a security method in which the user provides two ways of identification from separate categories.
+
+18 - Name some network monitoring tools?
+
+Some most essential network monitoring tools are:
+
+Nagios
+OpenNMS
+Splunk
+Icinga 2
+Wireshark
+
+19 - Which makes AWS DevOps highly accessible?
+Here are some reasons which make AWS DevOps a highly popular, such as:
+
+AWS CloudFormation
+AWS EC2
+AWS CloudWatch
+AWS CodePipeline
+
+20 - What is the Build in DevOps?
+The build is a method in which the source code is put together to check whether it works as a single unit. 
+In the build creation process, the source code will undergo compilation, testing, inspection, and deployment
+
+21 -  What is Continuous Testing?
+Continuous Testing constitutes the running of automated tests as part of the software delivery pipeline to provide 
+instant feedback on the business risks present in the most recent release. In order to prevent problems in step-switching
+in the Software delivery life-cycle and to allow Development teams to receive immediate feedback, every build is continually 
+tested in this manner. This results in significant increase in speed in a developer's productivity as it eliminates the requirement 
+for re-running all the tests after each update and project re-building
+
+22 - What is Automation Testing?
+Test automation or manual testing Automation is the process of automating a manual procedure in order to test an application or system.
+Automation testing entails the use of independent testing tools that allow you to develop test scripts that can be run repeatedly without
+the need for human interaction.
+
+Helps to save money and time.
+Unattended execution can be easily done.
+Huge test matrices can be easily tested.
+Parallel execution is enabled.
+
+23 - 
+
 
 =====GITHUB
 
