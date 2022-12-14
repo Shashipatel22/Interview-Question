@@ -1,5 +1,6 @@
 1 - Define and explain the three basic types of cloud services and the AWS products that are built based on them?
-The three basic types of cloud services are:
+
+>>The three basic types of cloud services are:
 
 Computing
 Storage
@@ -14,7 +15,44 @@ Networking - These include VPC, Amazon CloudFront, Route53
 
 2 - What is the relation between the Availability Zone and Region?
 
-AWS regions are separate geographical areas, like the US-West 1 (North California) and Asia South (Mumbai). On the other hand, availability zones
+>>AWS regions are separate geographical areas, like the US-West 1 (North California) and Asia South (Mumbai). On the other hand, availability zones
 are the areas that are present inside the regions. These are generally isolated zones that can replicate themselves whenever required.
 
-4 - what is code smell
+3 - what is code smell
+
+>>Code smells indicate a deeper problem, but as the name suggests, they are sniffable or quick to spot. The best smell is something easy to find but 
+will lead to an interesting problem, like classes with data and no behavior.
+
+4 - what is cloud-watch
+
+>>Amazon CloudWatch is a monitoring and management service that provides data and actionable insights for AWS, hybrid, 
+and on-premises applications and infrastructure resources
+
+5 - what is cloud-formation (it is infrastructure as a code)(IAAS)
+
+>>AWS CloudFormation is a service that gives developers and businesses an easy way to create a collection of related AWS 
+and third-party resources, and provision and manage them in an orderly and predictable fashion
+                                   (or)
+>>AWS CloudFormation simplifies provisioning and management on AWS. You can create templates for the service or application architectures you want 
+and have AWS CloudFormation use those templates for quick and reliable provisioning of the services or applications (called “stacks”).
+
+>we can use this template to create the services we can use this code to version control and if we can modify the code we can easily undesrstand
+>>aws cloud-formation uses YAML and JSON lanugauge
+
+6 - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
