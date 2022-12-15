@@ -1,0 +1,158 @@
+1 - what is IAAS
+
+>>Infrastructure as a service (IaaS) is a type of cloud computing service that offers essential compute, storage, and networking resources on demand, 
+ on a pay-as-you-go basis. IaaS is one of the four types of cloud services, along with software as a service (SaaS), platform as a service (PaaS), and serverless
+ 
+ 2 - what PAAS
+ 
+ >>Platform as a Service (PaaS) is a complete cloud environment that includes everything developers need to build, run, and manage applications—from servers and 
+ operating systems to all the networking, storage, middleware, tools, and more.
+ 
+ 3 - what is SAAS
+ 
+ >>What is SaaS? Software as a service (or SaaS) is a way of delivering applications over the Internet—as a service. Instead of installing and maintaining software,
+ you simply access it via the Internet, freeing yourself from complex software and hardware management
+ 
+ 4 - Define and explain the three basic types of cloud services and the AWS products that are built based on them?
+
+>>The three basic types of cloud services are:
+
+Computing
+Storage
+Networking
+Here are some of the AWS products that are built based on the three cloud service types:
+
+Computing - These include EC2, Elastic Beanstalk, Lambda, Auto-Scaling, and Lightsat.
+
+Storage - These include S3, Glacier, Elastic Block Storage, Elastic File System.
+
+Networking - These include VPC, Amazon CloudFront, Route53
+
+5 - what is virtual machines
+
+>>In computing, a virtual machine is the virtualization/emulation of a computer system. virtual machine software can run programs and operating systems, store data, connect
+to networks and doother computing functions and reuires maintenance such as updates and system montoring
+
+6 - What are the different types of virtualization in AWS, and what are the differences between them?
+
+>>Hardware Virtual Machine (HVM)
+It is a fully virtualized hardware, where all the virtual machines act separate from each other. These virtual machines boot by executing a master boot record 
+in the root block device of your image.
+>>Paravirtualization (PV)
+Paravirtualization-GRUB is the bootloader that boots the PV AMIs. The PV-GRUB chain loads the kernel specified in the menu.
+>>Paravirtualization on HVM
+PV on HVM helps operating systems take advantage of storage and network I/O available through the host.
+
+7 - Name some of the AWS services that are not region-specific
+
+>>AWS services that are not region-specific are:
+
+IAM
+Route 53
+Web Application Firewall 
+CloudFront
+
+8 - what is VPC
+
+>>Amazon Virtual Private Cloud (Amazon VPC) gives you full control over your virtual networking environment, including resource placement, connectivity, and security. 
+Get started by setting up your VPC in the AWS service console.
+
+>>Vpc is logical boundary
+>>vpc id is globally uniqe
+>>you can stop the particular ip one ec2 to another ip through routing table in peering
+ 
+9 - What is the relation between the Availability Zone and Region?
+
+>>AWS regions are separate geographical areas, like the US-West 1 (North California) and Asia South (Mumbai). On the other hand, availability zones
+are the areas that are present inside the regions. These are generally isolated zones that can replicate themselves whenever required.
+
+10  - what is VPC Perrring
+
+>>A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses.
+Instances in either VPC can communicate with each other as if they are within the same network
+
+>>you can also create the vpc peering one region mumbai to another region ohio like this
+>>you can also vpc peering one account to another account
+
+===disadvantages of peering
+
+>>increase in the vpc will increase in the vpc peerings
+>>each vpc needs a vpg for vpn connections
+
+11 -   what is nat-gateway
+
+>>A NAT gateway is a Network Address Translation (NAT) service. You can use a NAT gateway so that instances in a private subnet can connect to services outside your 
+VPC but external services cannot initiate a connection with those instances
+ 
+12 - what is NAT-Instance
+
+>>NAT-A NAT (Network Address Translation) instance is, like a bastion host, an EC2 instance that lives in your public subnet. A NAT instance, however, allows your 
+private instances outgoing connectivity to the internet while at the same time blocking inbound traffic from the internet
+
+13 - What are the differences between NAT Gateways and NAT Instances?
+ 
+NAT-Gateway
+1 - nat gateway managed by aws 
+2 - nat gateway canot assigned security groups
+3 - nat gateway highly availble
+4 - nat gateway bandwidth is upto 45 mbps
+5 - nat gateway perfomance is good
+
+NAT-Instance
+1 - nat instance managed by you
+2 - nat instance can assignes security groups
+3 - nat instance is also highly availble
+4 - nat instance bandwidth is depends on instnace bandwidth
+5 - nat instance performance compared to nat gateway is average
+
+14 - what is Vpc End-point
+
+>>A VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without requiring an 
+internet gateway,NAT device, VPN connection, or AWS Direct Connect connection.
+ 
+ 15 - what is gateway end-point
+
+>>gateway end-point is a gateway that you specific as a target for a route in your table for traffic destined to a supported AWS service
+
+16 - what is firewall
+
+firewall is security group it is used to control the incoming and outgoing traffic
+
+>>firewall two types
+
+1-stateful firewall
+>>it is two-way handshake  process
+>>
+
+2-stateless firewall
+>>it is not two-way handshake
+
+17 - what is NACL
+
+>>A network access control list (NACL) is an optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets.
+You might set up network ACLs with rules similar to your security groups in order to add an additional layer of security to your VPC.
+
+>>when you created vpc automatically create nacl 
+>>if anyone want say to change something nacl first ask send a mail 
+>>don't do changes in nacl in production environment
+>>need to add every rule in inbound and outbound  -->if you add ssh in inbound it will not allow so you need to add outbound also
+ 
+18 - What is OpenVPN used for?
+
+Open source OpenVPN uses VPN technologies to secure and encrypt data sent over the internet. Its custom VPN protocol uses SSL/TLS for key exchange. 
+Since its creation in 2001 it has become the de facto standard in the open source networking space with over 60 million downloads 
+ 
+19 - What is a transit gateway?
+
+A transit gateway is a network transit hub that you can use to interconnect your virtual private clouds (VPCs) and on-premises networks. As your cloud infrastructure 
+expands globally,inter-Region peering connects transit gateways together using the AWS Global Infrastructure. 
+ 
+20 - 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
