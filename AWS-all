@@ -122,7 +122,6 @@ firewall is security group it is used to control the incoming and outgoing traff
 
 1-stateful firewall
 >>it is two-way handshake  process
->>
 
 2-stateless firewall
 >>it is not two-way handshake
@@ -147,12 +146,103 @@ Since its creation in 2001 it has become the de facto standard in the open sourc
 A transit gateway is a network transit hub that you can use to interconnect your virtual private clouds (VPCs) and on-premises networks. As your cloud infrastructure 
 expands globally,inter-Region peering connects transit gateways together using the AWS Global Infrastructure. 
  
-20 - 
+20 - Is there any other alternative tool to log into the cloud environment other than console?
+
+Putty
+AWS CLI for Linux
+AWS CLI for Windows
+AWS CLI for Windows CMD
+AWS SDK
+Eclipse
+
+21 - what is EC2-Instance
+
+>>You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 enables you to 
+scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic.
  
+22 - what is AMI In AWS
+
+>>An Amazon Machine Image (AMI) is a supported and maintained image provided by AWS that provides the information required to launch an instance. You must specify 
+an AMI when you launch an instance. You can launch multiple instances from a single AMI when you require multiple instances with the same configuration. 
  
+>>AMI id is different of every region and every image
+>>you can use in production mostly use already created AMIs
+
+ 23 - You are trying to provide a service in a particular region, but you do not see the service in that region. Why is this happening, and how do you fix it?
+
+>>Not all Amazon AWS services are available in all regions. When Amazon initially launches a new service, it doesn’t get immediately published in all the regions. 
+They start small and then slowly expand to other regions. So, if you don’t see a specific service in your region, chances are the service hasn’t been published in your region yet. 
+However, if you want to get the service that is not available, you can switch to the nearest region that provides the services
+
+24 - what is authentication and authriozation
+
+>>authentication your accessing or login into the applicatio or portal entry only
+>>authrozation is nothing but you should be assign some roles are features
+
+25 - Define Amazon EC2 regions and availability zones?
+
+>>Availability zones are geographically separate locations. As a result, failure in one zone has no effect on EC2 instances in other zones. When it comes to regions, they may have one or more availability zones.
+This configuration also helps to reduce latency and costs
+
+26 - Explain Amazon EC2 root device volume?
+
+>>The image that will be used to boot an EC2 instance is stored on the root device drive. This occurs when an Amazon AMI runs a new EC2 instance. And this root device volume is supported by EBS or an instance store. 
+In general, the root device data on Amazon EBS is not affected by the lifespan of an EC2 instance
+
+27 - Mention the different types of instances in  Amazon EC2 and explain its features.
+
+>>General Purpose Instances: They are used to compute a range of workloads and aid in the allocation of processing, memory, and networking resources.
+>>Compute Optimized Instances: These are ideal for compute-intensive applications. They can handle  batch processing workloads, high-performance web servers, machine learning inference, and various other tasks
+>>Memory Optimized: They process workloads that handle massive datasets in memory and deliver them quickly.
+>>Accelerated Computing: It aids in the execution of floating-point number calculations, data pattern matching, and graphics processing. These functions are carried out using hardware accelerators.
+>>Storage Optimised: They handle tasks that require sequential read and write access to big data sets on local storage
+
+28 - What do you understand by 'changing' in Amazon EC2?
+
+>>To make limit administration easier for customers, Amazon EC2 now offers the option to switch from the current 'instance count-based limitations' to the new 'vCPU Based restrictions.' 
+As a result, when launching a combination of instance types based on demand, utilization is measured in terms of the number of vCPUs.
+
+29 - How do you upgrade or downgrade a system with near-zero downtime?
+You can upgrade or downgrade a system with near-zero downtime using the following steps of migration:
+
+Open EC2 console
+Choose Operating System AMI
+Launch an instance with the new instance type
+Install all the updates
+Install applications
+Test the instance to see if it’s working
+If working, deploy the new instance and replace the older instance
+Once it’s deployed, you can upgrade or downgrade the system with near-zero downtime.
+Take home these interview Q&As and get much more. Download the complete AWS Interview Guide here:
+
+30 - What are the tools and techniques that you can use in AWS to identify if you are paying more than you should be, and how to correct it?
+You can know that you are paying the correct amount for the resources that you are using by employing the following resources:
+
+Check the Top Services Table
+It is a dashboard in the cost management console that shows you the top five most used services. This will let you know how much money you are spending on the resources in question.
+Cost Explorer
+There are cost explorer services available that will help you to view and analyze your usage costs for the last 13 months. You can also get a cost forecast for the upcoming three months.
+AWS Budgets
+This allows you to plan a budget for the services. Also, it will enable you to check if the current plan meets your budget and the details of how you use the services.
+Cost Allocation Tags
+This helps in identifying the resource that has cost more in a particular month. It lets you organize your resources and cost allocation tags to keep track of your AWS costs.
+
+31 - 
  
- 
- 
- 
- 
- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
