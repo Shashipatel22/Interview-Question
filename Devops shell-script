@@ -875,11 +875,9 @@ is anything other than a null value then the splat expression will transform it 
 >>The CONCAT function combines the text from multiple ranges and/or strings, but it doesn't provide delimiter or IgnoreEmpty arguments. 
 CONCAT replaces the CONCATENATE function. However, the CONCATENATE function will stay available for compatibility with earlier versions of Excel
 
-8 - what is lookup and if statement in terraform and null-resource , taint
->>if your multiple times updateding null resource but will not gone update second you need to taint use command
-terraform taint null_resource.cluster[0]
-terraform taint null_resource.cluster[1]
-terraform taint null_resource.cluster[2] then you can run the commnad it will upate and store deatils on ec2 system
+8 - Define null resource in Terraform.
+null_resource implements standard resource library, but no further action is taken. The triggers argument allows an arbitrary set of values that 
+will cause the replacement of resources when changed
 
 9 - what is local-exec and remote-exec
 
@@ -956,9 +954,46 @@ Terraform Cloud enables infrastructure automation for provisioning, compliance, 
 >>Packer is an open-source VM image creation tool from Hashicorp. 
 It helps you automate the process of Virtual machine image creation on the cloud and on-prem virtualized environments.
 
+16 - what is terraform dry-run
+
+>>Dry runs help you identify trouble spots, discover sections you may not fully understand, and get a better understanding of how everything fits together.
+It's also a good way to find out if you don't fully understand how an activity is supposed to be conducted or how the virtual tools function.
+
+17 - What are the most useful Terraform commands?
+Some of the most useful Terraform commands are:
+
+terraform init - initializes the current directory
+terraform refresh - refreshes the state file
+terraform output - views Terraform outputs
+terraform apply - applies the Terraform code and builds stuff
+terraform destroy - destroys what has been built by Terraform
+terraform graph - creates a DOT-formatted graph
+terraform plan - a dry run to see what Terraform will do
+
+18 - What are some of the built-in provisioners available in Terraform?
+Here is the list of built-in provisioners in Terraform:
+
+Salt-masterless Provisioner
+Remote-exec Provisioner
+Puppet Provisioner
+Local-exec Provisioner
+Habitat Provisioner
+File Provisioner
+Chef Provisioner
+
+19 - What is terraform taint and untaint?
+Image result for what is terraform taint
+The Terraform Taint command allows you to manually flag a resource as tainted, which means it will be destroyed and recreated on the next terraform apply. 
+Terraform untaint allows you to remove that tainted condition from the resource
+
+20 - what is the use of provisoners in packer and terraform
+
+>>Terraform Provisioners are used for executing scripts or shell commands on a local or remote machine as part of resource creation/deletion. 
+They are similar to “EC2 instance user data” scripts that only run once on the creation and if it fails terraform marks it tainted
+
 ===============================================Kubernetes===============================================================================================
 
-
+1 - 
 
 
 
