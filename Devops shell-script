@@ -841,7 +841,153 @@ Handlers are automatically loaded by roles/<role_name>/handlers/main.yaml. Handl
 A module is a reusable, standalone script that Ansible runs on your behalf, either locally or remotely. Modules interact with your local machine, an API,
 or a remote system to perform specific tasks like changing a database password or spinning up a cloud instance.
 
-==================================================================Kubernetes=====================================================================================
+==================================================================Terraform and packer=====================================================================================
+
+1 - what is terraform
+
+>>Terraform is a tool for building, changing and versioning infrastructure safely and efficiently. Terraform can manage existing and popular cloud service providers as
+well as custom in-house solutions.Configuration files describe to Terraform the components needed to run a single application or your entire datacenter
+
+2 - is it terraform cloud aganstics
+>>terraform is cloud aganstic  -->yes terraform will work every cloud but the code is difference that why we calling cloud aganstics
+
+3 - what is proprietory
+it is like not a open-source when you using terraform you advised some code to then can verfiy and give resopnce 
+but in aws your rasing an ticket but its take some time to contact and its not accept your advise this proprietory
+
+4 - what is the differnce between argument refernce and attribute refernce in terraform
+>>In Terraform v0. 12 and later, the language makes a distinction between argument syntax and nested block syntax within blocks: 
+Argument syntax sets a named argument for the containing object. If the attribute has a default value then an explicitly-specified value entirely overrides that default.
+
+5 - how to deploy dev environment and prod environment in a single folder 
+
+>>dont use this type some times you may get confused but there is a way you need to create a workspaces
+>>in a single folder you can use multiple workspaces using workspace
+>>if your in dev environment but you done command in  prod environment then it will destroy the code in dev environment
+
+6 - what is splat syntax in terraform and element ,functions,
+
+>>Splat expressions have a special behavior when you apply them to a value that isn't a list, set, or tuple. If the value 
+is anything other than a null value then the splat expression will transform it into a single-element list, or more accurately a single-element tuple value
+
+7 -  where we use concat and what is concat
+
+>>The CONCAT function combines the text from multiple ranges and/or strings, but it doesn't provide delimiter or IgnoreEmpty arguments. 
+CONCAT replaces the CONCATENATE function. However, the CONCATENATE function will stay available for compatibility with earlier versions of Excel
+
+8 - what is lookup and if statement in terraform and null-resource , taint
+>>if your multiple times updateding null resource but will not gone update second you need to taint use command
+terraform taint null_resource.cluster[0]
+terraform taint null_resource.cluster[1]
+terraform taint null_resource.cluster[2] then you can run the commnad it will upate and store deatils on ec2 system
+
+9 - what is local-exec and remote-exec
+
+>>local-exec and remote-exec provisioners. The local-exec provisioner invokes a local executable after a resource is created. 
+This invokes a process on the machine running Terraform, not on the resource. The remote-exec provisioner invokes a script on a remote resource after it is created.
+
+10- what is for_each and count how to use in terraform and how many types of variables and what is variables 
+
+>>count is good if there is not change in the list index changes are sequentical/leanier. 
+any changes in the existing index will for the resouces to recreate
+
+>>this can be solved but for_each bcoz it uses key rather than index
+
+11 - what is modules in terraform 
+
+>>it is repetable code.one code you can use number of times
+
+12 -  what is terraform life cycle, Imports , terraform cloud 
+
+---Life cycle:-
+>>create_before_destroy
+--if your created an s3 or any system but your created wrong bucket or wrong vpc this logs have store in vpc flow logs
+but you dont want lose that dat on that you use create_before_destroy and then your write a code to
+copy the files to some other bucket store the data 
+
+>>prevent_destroy
+--if your createdan s3 bucket are any vpc or any ec2 system or anything no one want to delete you can use 
+this prevent_destory 
+
+lifecycle {
+prevent_destory = true
+}
+
+>>ignore_changes
+--if deployed some instance using terraform but your changed some of the tags or some data change 
+maually but in terraform you need to use ignore_changes then the the cant destory what you changed manually
+
+lifecycle {
+ignore changes = [
+ tags,enable_dns_hostname
+]
+}
+
+13 - what is terraform Imports?
+
+>>terraform Imports:-
+---when we have mistkaley or already deployed server in ec2 any service you need import that service
+using terraform command you can take the code command to copy the the code code into .tf file
+
+commands:-
+
+>>terraform import aws_instance.importing "instance-id from the aws"
+>>terraform state list
+>>terraform state show aws_instance.importing          -->you will get code copy and paste below your code page
+
+resource "aws_instance" "importing" {
+
+paste that copy that data
+
+}
+
+14 - what is terraform-cloud
+
+>>What is Terraform Cloud? Terraform Cloud is HashiCorp's managed service offering. It eliminates the need for unnecessary tooling and
+documentation for practitioners, teams, and organizations to use Terraform in production. Provision infrastructure in a remote environment 
+that is optimized for the Terraform workflow.
+
+What is Terraform cloud used for?
+Terraform Cloud enables infrastructure automation for provisioning, compliance, and management of any cloud, datacenter, and service
+
+15 - what is packer
+
+>>packer is used to create only images
+>>Packer is an open-source VM image creation tool from Hashicorp. 
+It helps you automate the process of Virtual machine image creation on the cloud and on-prem virtualized environments.
+
+===============================================Kubernetes===============================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
