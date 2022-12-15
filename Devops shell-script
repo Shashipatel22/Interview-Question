@@ -193,6 +193,88 @@ tools:-
 4-rundeck
 5-salt
 
+25 - what is montoring tools
+
+>>A monitoring application tracks your app's hardware utilization, SLA status, platform performance, and user response times. Among the metrics, 
+DevOps engineers can monitor here are server diagnostics, error logs, network traffic reports, historical statistics, and failure diagnostics
+
+Infrastrucrure-Monitoring tool
+1-nagios
+2-Prometheus 
+3-Zabbix
+4-datadog
+5-new-relic
+6-grafana
+
+Application-monitoring tool
+1-ELK stack
+2-splunk
+3-suma-logic
+4-solar-wind
+
+26 - What is a ticketing tool?
+
+>>A ticketing system is a management tool that processes and catalogs customer service requests. 
+Tickets, also known as cases or issues, need to be properly stored alongside relevant user information. 
+The ticketing system should be user-friendly for customer service representatives, managers, and administrators.
+
+types:-
+1-jira
+2-ServiceNow.
+
+27 - what is prometheus and grafana
+
+>>Prometheus is a monitoring solution for storing time series data like metrics. Grafana allows to visualize the data stored in Prometheus (and other sources). 
+This sample demonstrates how to capture NServiceBus metrics, storing these in Prometheus and visualizing these metrics using Grafana
+
+28 - what is redis server could you explain briefly
+
+>>What is Redis? Redis, which stands for Remote Dictionary Server, is a fast, open source, in-memory, key-value data store.
+ The project started when Salvatore Sanfilippo, the original developer of Redis, wanted to improve the scalability of his Italian startup
+
+29 - how you can manage facts
+
+>>since we have big environment. we have redis server which we have hosted in the aws 
+and we are managing all the facts in the redis for improved performance
+
+30 - what is sonarqube and what is the use of it
+
+>>SonarQube (formerly Sonar) is an open-source platform developed by SonarSource for 
+continuous inspection of code quality to perform automatic reviews with static analysis of code to detect bugs and code smells on 29 programming languages.
+     or
+>>SonarQube is a Code Quality Assurance tool that collects and analyzes source code, and provides reports for the code quality of your project. 
+It combines static and dynamic analysis tools and enables quality to be measured continually over time
+
+31 - what is maven&ant&graddle what is the use of it
+
+>>Gradle is a Groovy-based build automation tool that is an open-source and builds based on the concepts of Apache Maven and Apache Ant. 
+It is capable of building almost any type of software. It is designed for the multi-project build, which can be quite large
+
+32 - what is jfrog artifacts and what is the use for it
+
+>>JFrog Artifactory is a universal DevOps solution providing end-to-end automation and 
+management of binaries and artifacts through the application delivery process that improves productivity across your development ecosystem
+
+33 - what is artifactes 
+
+>>artifact is a by-product produced during the software development process. 
+It may consist of the project source code, dependencies, binaries or resources, and could be represented in different layout depending on the technology
+
+34 - what is maven
+
+>>Maven is a popular open-source build tool developed by the Apache Group to build, publish, and deploy several projects at once for better project management. 
+The tool provides allows developers to build and document the lifecycle framework.
+
+35 - can you explain maven-build cycle
+
+>>Maven makes the day-to-day work of Java developers easier and helps with the building and running of any Java-based project. 
+Maven Lifecycle: Below is a representation of the default Maven lifecycle and its 8 steps: Validate, Compile, Test, Package, Integration test, Verify, Install and Deploy
+
+
+
+
+
+
 =======================================GITHUB==================================================================================================
 
 1 - What is Git?
