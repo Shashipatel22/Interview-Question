@@ -740,7 +740,9 @@ ansible-vault encrypt foo.yml bar.yml baz.yml
 ansible-vault decrypt foo.yml bar.yml baz.yml
 
 7 - What is the ad-hoc command in Ansible?
-Ad-hoc commands are like one-line playbooks to perform a specific task only. The syntax for the ad-hoc command is
+
+>>there is no idempotant in Ad-hoc commnads
+>>Ad-hoc commands are like one-line playbooks to perform a specific task only. The syntax for the ad-hoc command is
 
 ansible [pattern] -m [module] -a "[module options]"
 For example, we need to reboot all servers in the staging group
