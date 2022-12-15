@@ -155,11 +155,13 @@ AWS CLI for Windows CMD
 AWS SDK
 Eclipse
 
-21 - what is EC2-Instance
+21 - What is Amazon EC2?
 
->>You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 enables you to 
-scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic.
- 
+EC2 is short for Elastic Compute Cloud, and it provides scalable computing capacity. Using Amazon EC2 eliminates the need to invest in hardware, leading to faster
+development and deployment of applications.You can use Amazon EC2 to launch as many or as few virtual servers as needed, configure security and networking, 
+and manage storage. It can scale up or down to handle changes in requirements, reducing the need to forecast traffic. EC2 provides virtual computing environments 
+called “instances.”
+
 22 - what is AMI In AWS
 
 >>An Amazon Machine Image (AMI) is a supported and maintained image provided by AWS that provides the information required to launch an instance. You must specify 
@@ -168,11 +170,11 @@ an AMI when you launch an instance. You can launch multiple instances from a sin
 >>AMI id is different of every region and every image
 >>you can use in production mostly use already created AMIs
 
- 23 - You are trying to provide a service in a particular region, but you do not see the service in that region. Why is this happening, and how do you fix it?
+23 - You are trying to provide a service in a particular region, but you do not see the service in that region. Why is this happening, and how do you fix it?
 
 >>Not all Amazon AWS services are available in all regions. When Amazon initially launches a new service, it doesn’t get immediately published in all the regions. 
-They start small and then slowly expand to other regions. So, if you don’t see a specific service in your region, chances are the service hasn’t been published in your region yet. 
-However, if you want to get the service that is not available, you can switch to the nearest region that provides the services
+They start small and then slowly expand to other regions. So, if you don’t see a specific service in your region, chances are the service hasn’t been published in 
+your region yet. However, if you want to get the service that is not available, you can switch to the nearest region that provides the services
 
 24 - what is authentication and authriozation
 
@@ -181,26 +183,29 @@ However, if you want to get the service that is not available, you can switch to
 
 25 - Define Amazon EC2 regions and availability zones?
 
->>Availability zones are geographically separate locations. As a result, failure in one zone has no effect on EC2 instances in other zones. When it comes to regions, they may have one or more availability zones.
-This configuration also helps to reduce latency and costs
+>>Availability zones are geographically separate locations. As a result, failure in one zone has no effect on EC2 instances in other zones. When it comes to regions, 
+they may have one or more availability zones.This configuration also helps to reduce latency and costs
 
 26 - Explain Amazon EC2 root device volume?
 
->>The image that will be used to boot an EC2 instance is stored on the root device drive. This occurs when an Amazon AMI runs a new EC2 instance. And this root device volume is supported by EBS or an instance store. 
-In general, the root device data on Amazon EBS is not affected by the lifespan of an EC2 instance
+>>The image that will be used to boot an EC2 instance is stored on the root device drive. This occurs when an Amazon AMI runs a new EC2 instance. 
+And this root device volume is supported by EBS or an instance store. In general, the root device data on Amazon EBS is not affected by the lifespan of an 
+EC2 instance
 
 27 - Mention the different types of instances in  Amazon EC2 and explain its features.
 
 >>General Purpose Instances: They are used to compute a range of workloads and aid in the allocation of processing, memory, and networking resources.
->>Compute Optimized Instances: These are ideal for compute-intensive applications. They can handle  batch processing workloads, high-performance web servers, machine learning inference, and various other tasks
+>>Compute Optimized Instances: These are ideal for compute-intensive applications. They can handle  batch processing workloads, high-performance web servers, 
+machine learning inference, and various other tasks
 >>Memory Optimized: They process workloads that handle massive datasets in memory and deliver them quickly.
->>Accelerated Computing: It aids in the execution of floating-point number calculations, data pattern matching, and graphics processing. These functions are carried out using hardware accelerators.
+>>Accelerated Computing: It aids in the execution of floating-point number calculations, data pattern matching, and graphics processing. These functions are 
+carried out using hardware accelerators.
 >>Storage Optimised: They handle tasks that require sequential read and write access to big data sets on local storage
 
 28 - What do you understand by 'changing' in Amazon EC2?
 
->>To make limit administration easier for customers, Amazon EC2 now offers the option to switch from the current 'instance count-based limitations' to the new 'vCPU Based restrictions.' 
-As a result, when launching a combination of instance types based on demand, utilization is measured in terms of the number of vCPUs.
+>>To make limit administration easier for customers, Amazon EC2 now offers the option to switch from the current 'instance count-based limitations' to the new 
+'vCPU Based restrictions.' As a result, when launching a combination of instance types based on demand, utilization is measured in terms of the number of vCPUs.
 
 29 - How do you upgrade or downgrade a system with near-zero downtime?
 You can upgrade or downgrade a system with near-zero downtime using the following steps of migration:
@@ -219,30 +224,532 @@ Take home these interview Q&As and get much more. Download the complete AWS Inte
 You can know that you are paying the correct amount for the resources that you are using by employing the following resources:
 
 Check the Top Services Table
-It is a dashboard in the cost management console that shows you the top five most used services. This will let you know how much money you are spending on the resources in question.
-Cost Explorer
-There are cost explorer services available that will help you to view and analyze your usage costs for the last 13 months. You can also get a cost forecast for the upcoming three months.
-AWS Budgets
-This allows you to plan a budget for the services. Also, it will enable you to check if the current plan meets your budget and the details of how you use the services.
-Cost Allocation Tags
-This helps in identifying the resource that has cost more in a particular month. It lets you organize your resources and cost allocation tags to keep track of your AWS costs.
+It is a dashboard in the cost management console that shows you the top five most used services. This will let you know how much money you are 
+spending on the resources in question.Cost Explorer
+There are cost explorer services available that will help you to view and analyze your usage costs for the last 13 months. You can also get a cost
+forecast for the upcoming three months.AWS Budgets
+This allows you to plan a budget for the services. Also, it will enable you to check if the current plan meets your budget and the details of how you 
+use the services.Cost Allocation Tags
+This helps in identifying the resource that has cost more in a particular month. It lets you organize your resources and cost allocation tags to keep 
+track of your AWS costs.
 
-31 - 
+31 -  What is the difference between a Spot Instance, an On-demand Instance, and a Reserved Instance?
+
+>>Spot instances are unused EC2 instances that users can use at a reduced cost.
+>>When you use on-demand instances, you must pay for computing resources without making long-term obligations.
+>>Reserved instances, on the other hand, allow you to specify attributes such as instance type, platform, tenancy, region, and availability zone. 
+Reserved instances offer significant reductions and capacity reservations when instances in certain availability zones are used.
+
+32 -Define Snapshots in Amazon Lightsail?
+
+The point-in-time backups of EC2 instances, block storage drives, and databases are known as snapshots. They can be produced manually or automatically at any moment. 
+Your resources can always be restored using snapshots, even after they have been created. 
+These resources will also perform the same tasks as the original ones from which the snapshots were made.
+
+33 - How do you set up a system to monitor website metrics in real-time in AWS?
+>>Amazon CloudWatch helps you to monitor the application status of various AWS services and custom events. It helps you to monitor:
+
+State changes in Amazon EC2
+Auto-scaling lifecycle events
+Scheduled events
+AWS API calls
+Console sign-in events
+amazon cloud watch
+
+34 - With specified private IP addresses, can an Amazon Elastic Compute Cloud (EC2) instance be launched? If so, which Amazon service makes it possible?
+
+>>Yes. Utilizing VPC makes it possible (Virtual Private Cloud).
+
+35 - What is an Elastic Transcoder?
+
+>>To support multiple devices with various resolutions like laptops, tablets, and smartphones, we need to change the resolution and format of the video. 
+This can be done easily by an AWS Service tool called the Elastic Transcoder, which is a media transcoding in the cloud that exactly lets us do the needful. 
+It is easy to use, cost-effective, and highly scalable for businesses and developers.
+
+36 - On an EC2 instance, an application of yours is active. Once the CPU usage on your instance hits 80%, you must reduce the load on it.What strategy do you 
+use to complete the task?
+
+>>It can be accomplished by setting up an autoscaling group to deploy additional instances, when an EC2 instance's CPU use surpasses 80% and by
+allocating traffic across instances via the creation of an application load balancer and the designation of EC2 instances as target instances.
+
+37 - What are the different types of EC2 instances based on their costs?
+The three types of EC2 instances are:
+
+On-demand Instance
+It is cheap for a short time but not when taken for the long term
+Spot Instance
+It is less expensive than the on-demand instance and can be bought through bidding. 
+Reserved Instance
+If you are planning to use an instance for a year or more, then this is the right one for you
+
+38 - What Are Some of the Security Best Practices for Amazon EC2?
+
+>>Security best practices for Amazon EC2 include using Identity and Access Management (IAM) to control access to AWS resources; restricting access by only allowing 
+trusted hosts or networks to access ports on an instance; only opening up those permissions you require, and disabling password-based logins for instances 
+launched from your AMI.
+
+39 - What are the common types of AMI designs?
+There are many types of AMIs, but some of the common AMIs are:
+
+Fully Baked AMI
+Just Enough Baked AMI (JeOS AMI)
+Hybrid AMI
+
+40 - What are Key-Pairs in AWS?
+
+The Key-Pairs are password-protected login credentials for the Virtual Machines that are used to prove our identity while connecting the Amazon EC2 instances.
+The Key-Pairs are made up of a Private Key and a Public Key which lets us connect to the instances.
+
+41 - what EBS Volumes
+
+>>Amazon Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances. 
+EBS volumes behave like raw, unformatted block devices. You can mount these volumes as devices on your instances
+>>it is permanent storage/persistance
+>>it can be increased to max of 16TB you can't decreased the ebs
+>>it is availble in SSD and HDD
+
+disadvantages:-
+>>ebs volume yo can apply only one ec2 system
+>>ebs volume yo can apply only one ec2 system and it should be same availbility zone
+>>it is only for linux
+
+advantages:-
+>>you can diretly mount to the system 
+>>it can shared between multiple servers and multiple availbility zones
+
+42 - Types od EBS-Volumes
+
+===general purpose ssd gp2
+>>it is cheaper compared to provisioned iops
+>>it is high speed gp2  performance
+>>minimum 1GB to you can extend volume upto 16TB
+>>Minimum IOPS 100
+>>Maximum IOPS 16000
+>>if you taken 1GB you will get 3IOPS          -->input/output operations per second
+>>you can't change iops you should use aws given iops
+
+===gp3
+>>it is also costly to gp2
+>>minimum 1GB to you can extend volume upto 16TB
+>>Minimum IOPS 3000
+>>Maximum IOPS 16000
+
+====IO1 Provisioned IOPS
+>>it is costly compared to gp2 
+>>it is also high spped performance
+>>minimum 4GB to you can extend volume upto 16TB
+>>Minimum IOPS 100
+>>Maximum IOPS 16000
+>>if you taken 1GB you will get 50IOPS
+>>you change iops what you want you can modify the iops details
+
+====IO1 Provisioned IOPS
+>>it is costly compared to gp2 and IO1
+>>it is also high spped performance
+>>minimum 4GB to you can extend volume upto 64TB
+>>Minimum IOPS 100
+>>Maximum IOPS 256000
+>>if you taken 1GB you will get 1000IOPS
+>>you change iops what you want you can modify the iops details
+
+43 -===example for iops gp2&io1
+
+DB requirment given by client 10TB he needs 100000 IOPs using do storage
+
+gp2:
+2 x 5120 = 10TB  30720 iops you will get
+2 x 5120 = 10TB  30720 iops you will get
+2 x 5120 = 10TB  30720 iops you will get
+1 x 2500 = 2.5TB 7000 iops you will get 
+>>estimate cost of your monthly bill ($3650.90)
+>>con: max 250mb/sec
+
+===if you need 100000iops you need to increase gp2 instance but oi1 you can get easily
+
+IO1
+2 x 5120 = 100000 iops with each volume 50000iops
+requirment is fullfield  but it is costly compared to gp2
+
+eatimate cost of monthly bill ($8558)
+con:max throughput 781mb/sec
+
+===cold HDD and optimized HDD and Magnetic (standard)
+
+>>remaining all drives is slow and it is cheaper 
+>>it is used for storage purpose or testing servers purpose
+>>when you cant use data regularly then you can use this
+
+where we can sql databese we can use ebs volumes explaining beloow
+
+>>windows or linux we can gp2 volume
+>>system databases we can gp2 volume
+>>user database we can use IO1 volume
+>>database transaction logs we can use IO1 volume 
+>>tempDB we can use we can use instance store or standard
+>>page file i virtual memory we can use instance store or standard
+>>backups  we can use magnetic or standard
+
+44 - what is Instance store
+
+>>instance store is temporary storage data will be deleted if serevr reset
+>>it cannot be increased or decreased
+>>only ssd type is available
+>>when you use instance storage while launching ec2 if the server restart or reset the data will be loose
+
+45 - what is Glacier
+
+>>s3 glacier cheap storage
+>>for longterm backup we can use this
+>>if you stored data in glacier if retriving it  will charge it's not for regular purpose 
+its for longterm
+>>you can take glacier backup using third-party tools fast glacier, altro, vertias,netbackup,networker,Aavamar,Tivoli
+>>glacier is called vault
+
+46 - what is EFS and what is the use case of it
+
+>>EFS is a file storage service for use with Amazon compute (EC2, containers, serverless) and on-premises servers. 
+EFS provides a file system interface, file system access semantics (such as strong consistency and file locking), and concurrently accessible storage 
+for up to thousands of EC2 instances
+
+uses cases:-
+>>you can directly mount the system to ec2 instances
+>>it is a share folder for network in a region
+>>it is network file system  
+>>it is unix or linux supported
+>>it can shared between multiple servers and multiple regions
+>>the storage limit 8PB
+
+47 - What is Amazon S3? 
+
+S3 is short for Simple Storage Service, and Amazon S3 is the most supported storage platform available. S3 is object storage that can store and retrieve any amount
+of data from anywhere.Despite that versatility, it is practically unlimited as well as cost-effective because it is storage available on demand. In addition to 
+these benefits, it offers unprecedented levels of durability and availability. Amazon S3 helps to manage data for cost optimization, access control, and compliance. 
+
+>>we can store log files 
+>>maximum uploading one file size upto 5TB
+>>it is global unique name
+>>you can upload files 3types 1 - cli and 2 - aws console 3 - application through api or jenkins
+>>mostly upload through api or applcation through
+>>s3 bucket is not global why meanswhen you creating a buckrt its ask region but it will show all the regions
+>>s3 availbilty is 99.9 uptime
+>>s3 durability is 99.999999 it will not gone delete 
+>>when you uploading a file it will save in 3 az but it will not show that saving
+>>it will charge when you uploading and storage and when you accessing through internet will cost 
+>>you can enable version control
+
+---storage types
+>>if frequently using data means use this (standard)
+>>if we can't access frequently that's a old data we can use this (standar, glacier)
+>>temporary log files you can use this (One Zone-IA)
+
+48 - what is S3 Replication
+
+>>transfer the data one bucket to another bucket
+>>craete bucket anji256 on that time you should enable the replication
+>>it is use gor mostly log-purpose of saving
+
+===how to add replication
+>>click on add rule >>enable version
+>>select bucket anji159
+>>select the storage type glacier or anything
+>>click on next done
+>>if you upload data in the bucket of anji256 the data will save in the bucket of anji159
+
+49 - Can S3 Be Used with EC2 Instances, and If Yes, How?
+
+Amazon S3 can be used for instances with root devices backed by local instance storage. That way, developers have access to the same highly scalable, reliable, fast,
+inexpensive data storage infrastructure that Amazon uses to run its own global network of websites. To execute systems in the Amazon EC2 environment, 
+developers load Amazon Machine Images (AMIs) into Amazon S3 and then move them between Amazon S3 and Amazon EC2.
+
+Amazon EC2 and Amazon S3 are two of the best-known web services that make up AWS
+
+50 - How many S3 buckets can be created?
+
+Up to 100 buckets can be created by default
+
+51 - What is the maximum limit of elastic IPs anyone can produce?
+
+A maximum of five elastic IP addresses can be generated per location and AWS account.
+
+52 - what is storage gateway and types
+
+>>You can use Storage Gateway to simplify storage management and reduce costs for key hybrid cloud storage use cases. 
+These include moving backups to the cloud, using on-premises file shares backed by cloud storage, and providing low-latency access to 
+data in AWS for on-premises applications.
+
+>>volume-gateway:- Volume Gateways allow you to have point-in-time backups of your volumes stored as EBS snapshots, and come in two different operational modes: 
+stored and cached. Stored volumes make your entire data available locally on the gateway, while maintaining an asynchronous copy in the S3 bucket
+
+>>Storage-gateway:- You can use Storage Gateway to simplify storage management and reduce costs for key hybrid cloud storage use cases. These include moving backups 
+to the cloud, using on-premises file shares backed by cloud storage, and providing low-latency access to data in AWS for on-premises applications
+
+>>Tape-gateway:-Tape Gateway enables you to replace using physical tapes on premises with virtual tapes in AWS without 
+changing existing backup workflows. Tape Gateway supports all leading backup applications and caches virtual tapes on premises for low-latency data access
+
+53 -  what is AWS Backup
+
+>>your specify the some of the resource in aws to take backup on AWS Backup service
+>>its nothing but snapshots
+
+54 - how many types of backup
+
+>>two types
+1-automatic
+two types
+a-daily backup
+b-transactionlogs
+2-snapshots
+
+55 - how many days take AWS-backup can retrive
+
+>>minimum 35 days
+
+56 - what is Route53 and what is the uses
+
+>>Amazon Route 53 is a highly available and scalable Domain Name System (DNS) web service. Route 53 connects user requests to internet applications running on 
+AWS or on-premises.
+
+57 - What is dns how it works
+
+>>8.8.8.8 and 8.8.4.4 this ip address and dns is given by google itself this two ipaddress owned by google. its given by free by google
+>>dns used to convert domain name to ip address.if you given gogle.com url bar the dns is converting google.com to ip address and search google.com
+>>in your real time your isp will give dns address
+>>most orgnazation disable ping to stop the ddos attacks by hackers
+>>rembering name is easy but number are diffcult that we using dns names
+
+58 - what is hostname resolution 
+
+>>HostName resolution is the process of associating names and IP addresses, and it's one of the most essential services on a network. 
+People understand descriptive names, but network communications require difficult-to-remember addresses
+
+59 - what is fqdn
+
+>>A fully qualified domain name (FQDN) is the complete domain name for a specific computer, or host, on the internet. 
+The FQDN consists of two parts: the hostname and the domain name. For example, an FQDN for a hypothetical mail server 
+might be mymail.somecollege.edu
+
+60 - what is cloud-watch
+
+>>Amazon CloudWatch is a monitoring and management service that provides data and actionable insights for AWS, hybrid, 
+and on-premises applications and infrastructure resources
+
+61 - What services can be used to create a centralized logging solution?
+
+>>The essential services that you can use are Amazon CloudWatch Logs, store them in Amazon S3, and then use Amazon Elastic Search to visualize them.
+You can use Amazon Kinesis Firehose to move the data from Amazon S3 to Amazon ElasticSearch.
+
+62 - What are the native AWS Security logging capabilities?
+
+>>Most of the AWS services have their logging options. Also, some of them have an account level logging, like in AWS CloudTrail, AWS Config, and others.
+Let’s take a look at two services in specific:
+
+1-AWS CloudTrail:
+>>cloudtrail is used to see th login logut details and activitesits not give detailed information
+
+2-AWS Config:
+>>AWS Config is a fully managed service that provides you with an AWS resource inventory, configuration history, and configuration 
+change notifications to enable security and governance.
+
+63 - What is a DDoS attack, and what services can minimize them?
+
+>>DDoS is a cyber-attack in which the perpetrator accesses a website and creates multiple sessions so that the other legitimate users cannot access the service.
+The native tools that can help you deny the DDoS attacks on your AWS services are:
+
+AWS Shield
+AWS WAF
+Amazon Route53
+Amazon CloudFront
+ELB
+VPC
+
+64 - What is geo-targeting in CloudFront?
+
+Geo-Targeting is a concept where businesses can show personalized content to their audience based on their geographic location without changing the URL. This helps you 
+create customized content for the audience of a specific geographical area, keeping their needs in the forefront.
+
+65 - What is CDN and how it works?
+
+>>A CDN is a network of servers that distributes content from an “origin” server throughout the world by caching content close to where each end user is accessing the 
+internet via a web-enabled device. The content they request is first stored on the origin server and is then replicated and stored elsewhere as needed.
+
+66 - what is cloudtrail
+
+>>cloudtrail is used to see th login logut details and activitesits not give detailed information
+>>cloudtrail is data will save only 90 days, so we can import that into aws s3 or any centrailzied locatons
+
+67 - what is AWS Service Catalog
+
+>>AWS Service Catalog enables organizations to create and manage catalogs of IT services that are approved for AWS. 
+These IT services can include everything from virtual machine images, servers, software, databases, and more to complete multi-tier application architectures
+
+68 - what is AWs SSM
+>>service manager is  configuration management tool
+               or 
+>>AWS Systems Manager Agent (SSM Agent) is Amazon software that runs on Amazon Elastic Compute Cloud (Amazon EC2) instances, edge devices, and on-premises servers 
+and virtual machines (VMs). SSM Agent makes it possible for Systems Manager to update, manage, and configure these resources
+
+69 - What is load balancer and how it works? and types of load balancer
+
+A load balancer acts as the “traffic cop” sitting in front of your servers and routing client requests across all servers capable of fulfilling those requests 
+in a manner that maximizes speed and capacity utilization and ensures that no one server is overworked, which could degrade performance
+
+1- Network load balancer
+>>A load balancer serves as the single point of contact for clients. The load balancer distributes incoming traffic across multiple targets, such as Amazon EC2 
+instances.This increases the availability of your application. You add one or more listeners to your load balancer.
+
+>>it is an layer 4 in transpot layer 
+>>it is use or support all protocals
+rdp,ssh,http,https
+
+2- Application load balancer
+
+A load balancer serves as the single point of contact for clients. The load balancer distributes incoming application traffic across multiple targets, such as 
+EC2 instances,in multiple Availability Zones. This increases the availability of your application
+
+>>it is layer 7 in application layer
+>>it uses only few protocals
+https,http
+
+70 - what is cross-zone load-balancer
+
+>>The nodes for your load balancer distribute requests from clients to registered targets. When cross-zone load balancing is enabled, each load balancer 
+node distributes traffic across the registered targets in all enabled Availability Zones
+
+71 - what is ssl-off loading or 
+
+>>SSL termination refers to the process of decrypting encrypted traffic before passing it along to a web server.
+            or
+>>An SSL connection sends encrypted data between an end-user's computer and web server by using a certificate for authentication. 
+SSL termination helps speed the decryption process and reduces the processing burden on backend servers
+
+72 - what is round-robin load balancer              -->video 17 40mins
+
+>>Round-robin DNS is a technique of load distribution, load balancing, or fault-tolerance provisioning multiple, redundant Internet Protocol service hosts, 
+e.g., Web server, FTP servers, by managing the Domain Name System's (DNS) responses to address requests from client computers according to an appropriate 
+statistical model        (or)
+>>Round robin load balancing is a simple way to distribute client requests across a group of servers. A client request is forwarded to each server in turn.
+
+How does it works:
+>>What Is Round-Robin Load Balancing? Round‑robin load balancing is one of the simplest methods for distributing client requests across a group of servers. 
+Going down the list of servers in the group, the round‑robin load balancer forwards a client request to each server in turn.
+
+73 - what is target group in load balancer
+>>collections of machines and also port
+         or
+>>A target group tells a load balancer where to direct traffic to : EC2 instances, fixed IP addresses; or AWS Lambda functions, amongst others. When creating a 
+load balancer, you create one or more listeners and configure listener rules to direct the traffic to one target group
+
+74 - what is the use of health checks in aws
+
+>>Health checks are a way of asking a service on a particular server whether or not it is capable of performing work successfully. 
+Load balancers ask each server this question periodically to determine which servers it is safe to direct traffic to.
+
+75 - Your business prefers to use its email address and domain to send and receive compliance emails. What service do you recommend to implement it easily 
+and budget-friendly?
+
+>>This can be accomplished by using Amazon Simple Email Service (Amazon SES), a cloud-based   email-sending service.
+
+76 - Describe SES.
+
+>>Amazon offers the Simple Email Service (SES) service, which allows you to send bulk emails to customers swiftly at a minimal cost.
  
+77 - what is IAM
 
+>>AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. You use IAM to control who is authenticated 
+(signed in) and authorized (has permissions) to use resources.
 
+78 - what are the types IAM policies    -->see in iam.txt read inline policy
+>>aws managed policy
+>>user managed policy
+>>inline policy it is not visible for everyone it is specific for user only or groups only
 
+79 - what is IAM policy simulator?
+>>Iam policy simulator is used to see the policy briefly what you attached to the users for permisiions what you given
 
+80 - can you describe in-line-policy
+>>ec2:describe* is nothing but seeing or readonly for all ec2 action
+             or
+>>An inline policy is a policy that's embedded in an IAM identity (a user, group, or role). That is, the policy is an inherent part of the identity.
+ You can create a policy and embed it in an identity, either when you create the identity or later.
 
+81 - where we can use roles
+>>Roles are a common approach to handling authorization and permissions in a web application. For example, it's common to create an Administrator role that gives 
+admin users more permissions or power than normal users. In this project, you'll add a Manage Users page that only administrators can see.
 
+82 - what is role-switching
+>>When you switch to a role, you temporarily give up your user permissions and work with the permissions that are assigned to the role. 
+When you exit the role, your user permissions are automatically restored
 
+83 - ho you can manage the 20 accounts as acccounts
+>>we can use orgnzation create the some group to add and divide specific groups to aws accounts
+                              (or)
+>>if we have 20 accounts we use master and sub-account architecture we use. master is there we use organzations, properly use organzation units we kept as internal
+external and third party we are properly segrgated. then we can apply security control policy ,we can restrict users using permisiion boundary
 
+84 - how to secure your system or aws accounts how to see logs 
+>>using cloud trail feature enable it send the logs into s3 bucket
 
+85 - What is RDS AWS used for?
+Amazon Relational Database Service (RDS) is a managed SQL database service provided by Amazon Web Services (AWS). 
+Amazon RDS supports an array of database engines to store and organize data. It also helps with relational database management tasks, 
+such as data migration, backup, recovery and patching.
 
+86 - what is the rds failover time
+>>60-120 seconds
 
+87 -rds database tpes
 
+1-master(primary)
+2-read(secondary)replica       -->you can create read replica
 
+>>some tester has come and asked we have test the rds your not giving the primary you dont
+know how to access the secondary that time you can use the read replica
+>>read replica just copy a primary you can put another region also
+>>in read replica you can't do write on database its only read option
 
+88. Will your standby RDS be launched in the same availability zone as your primary?
+
+No, standby instances are launched in different availability zones than the primary, resulting in physically separate infrastructures. This is because the entire purpose
+of standby instances is to prevent infrastructure failure. As a result, if the primary instance fails, the backup instance will assist in recovering all of the data.
+
+89 - How would you address a situation in which the relational database engine frequently collapses when traffic to your RDS instances increases, given that the RDS instance replica
+is not promoted as the master instance?
+
+>>A larger RDS instance type is required for handling significant quantities of traffic, as well as producing manual or automated snapshots to recover data if the 
+RDS instance fails
+
+90 - What is auto-scaling?
+
+Auto-scaling is a function that allows you to provision and launch new instances whenever there is a demand. It allows you to automatically increase or decrease 
+resource capacity in relation to the demand.Cloud Architect Master's
+
+91 - what is SNS
+
+>>Amazon Simple Notification Service (Amazon SNS) is a managed service that provides message delivery from publishers to subscribers (also known as producers and 
+consumers). Publishers communicate asynchronously with subscribers by sending messages to a topic, which is a logical access point and communication channel
+
+92 - what is deregistration delay
+>>Elastic Load Balancing stops sending requests to targets that are deregistering. By default, Elastic Load Balancing waits 300 seconds before completing the 
+deregistration process,which can help in-flight requests to the target to complete
+         or
+>>Connection draining allows you to specify a maximum time (between 1 and 3,600 seconds and default 300 seconds) to keep the connections alive before reporting the
+instance as de-registered. The maximum timeout limit does not apply to connections to unhealthy instances.
+
+93 - What is Inspector in AWS
+
+>>Amazon Inspector is an automated vulnerability management service that continually scans AWS workloads for software vulnerabilities and unintended network exposure.
+
+94 - what is lambda and what is use of lambda
+
+>>Lambda runs your code on high availability compute infrastructure and performs all the administration of your compute resources. This includes server and operating system maintenance, 
+capacity provisioning and automatic scaling, code and security patch deployment, and code monitoring and logging.
+
+95 - what is AWS Service Catalog
+
+>>AWS Service Catalog enables organizations to create and manage catalogs of IT services that are approved for AWS. 
+These IT services can include everything from virtual machine images, servers, software, databases, and more to complete multi-tier application architectures
+
+96 - 
 
 
 
