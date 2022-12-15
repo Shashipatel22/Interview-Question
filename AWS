@@ -83,13 +83,14 @@ if it comes false then it update the system or resources
 you can import that resource using the Import-resource option but you must mention "deletionpolicy": "retain" is mandatory and if you want destory that system using
 cloud-formation means first system will delete but next time add system not gone delete because it will using retain policy
 
-10 - what is roolback failure in cloud-formation
+14 - what is roolback failure in cloud-formation
 
 >>roll-back failure is must be enable. when your deploying code using cloud-formation if gets an error then automatically delete the everything what is deployed in cloud-formation 
 
 10 - what is cloudtrail
 
 >>cloudtrail is used to see th login logut details and activitesits not give detailed information
+>>cloudtrail is data will save only 90 days, so we can import that into aws s3 or any centrailzied locatons
 
 11 - what is AWS Service Catalog
 >>AWS Service Catalog enables organizations to create and manage catalogs of IT services that are approved for AWS. 
@@ -266,34 +267,13 @@ Reserved instances offer significant reductions and capacity reservations when i
 >>To make limit administration easier for customers, Amazon EC2 now offers the option to switch from the current 'instance count-based limitations' to the new 'vCPU Based restrictions.' 
 As a result, when launching a combination of instance types based on demand, utilization is measured in terms of the number of vCPUs.
 
-28 - Define Snapshots in Amazon Lightsail?
-
->
- 
-1. Define and explain the three basic types of cloud services and the AWS products that are built based on them?
-The three basic types of cloud services are:
-
-Computing
-Storage
-Networking
-Here are some of the AWS products that are built based on the three cloud service types:
-
-Computing - These include EC2, Elastic Beanstalk, Lambda, Auto-Scaling, and Lightsat.
-
-Storage - These include S3, Glacier, Elastic Block Storage, Elastic File System.
-
-Networking - These include VPC, Amazon CloudFront, Route53
-
-2. What is the relation between the Availability Zone and Region?
-AWS regions are separate geographical areas, like the US-West 1 (North California) and Asia South (Mumbai). On the other hand, availability zones are the areas that are present inside the regions. These are generally isolated zones that can replicate themselves whenever required.
-
-aws region
-
 3. What is auto-scaling?
-Auto-scaling is a function that allows you to provision and launch new instances whenever there is a demand. It allows you to automatically increase or decrease resource capacity in relation to the demand.
 
+Auto-scaling is a function that allows you to provision and launch new instances whenever there is a demand. It allows you to automatically increase or decrease resource capacity in relation to the demand.
 Cloud Architect Master's
+
 4. What is geo-targeting in CloudFront?
+
 Geo-Targeting is a concept where businesses can show personalized content to their audience based on their geographic location without changing the URL. This helps you create customized content for the audience of a specific geographical area, keeping their needs in the forefront.
 
 5. What are the steps involved in a CloudFormation Solution?
