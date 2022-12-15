@@ -610,32 +610,40 @@ web application will be face down-time. it is only for one server. if you want i
 >>docker stack:-Docker Stack is run across a Docker Swarm, which is essentially a group of machines running the Docker daemon, which are grouped together,
 essentially pooling resources. Stacks allow for multiple services, which are containers distributed across a swarm, to be deployed and grouped logically
 
-15 - what is docker swarm is quoram 
+15 - what is docker swarm 
+
+>>A Docker Swarm is a group of either physical or virtual machines that are running the Docker application and that have been configured to join together in a cluster.
+The activities of the cluster are controlled by a swarm manager, and machines that have joined the cluster are referred to as nodes.
+
+>>Summary. The Docker Swarm mode allows an easy and fast load balancing setup with minimal configuration. Even though the swarm itself already performs 
+a level of load balancing with the ingress mesh, having an external load balancer makes the setup simple to expand upon
+
+16 - what is docker swarm is quoram 
 
 >>In a swarm of N managers, a quorum (a majority) of manager nodes must always be available. For example, in a swarm with five managers,
  a minimum of three must be operational and in communication with each other
 
-16 - why quoram needs an odd number
+17 - why quoram needs an odd number
 >>quoram is an latein word
 >>minimum number of nodes in swarm cluster that needs to be up and running for swarm cluster to work
 
-17 - what is docker ingress and docker gateway-bridge
+18 - what is docker ingress and docker gateway-bridge
 >>The docker_gwbridge is a bridge network that connects the overlay networks (including the ingress network) to an individual Docker daemon's physical network. 
 By default, each container a service is running is connected to its local Docker daemon host's docker_gwbridge network
 
-18 - what is ingress controller
+19 - what is ingress controller
 >>The Ingress Controller is an application that runs in a cluster and configures an HTTP load balancer according to Ingress resources. 
 The load balancer can be a software load balancer running in the cluster or a hardware or cloud load balancer running externally
 
-19 - what is roolingupdate in docker
+20 - what is roolingupdate in docker
 >>The scheduler applies rolling updates as follows by default: Stop the first task. Schedule update for the stopped task. 
 Start the container for the updated task. If the update to a task returns RUNNING , wait for the specified delay period then start the next task
 
-20 - what is in efk stack in docker
+21 - what is in efk stack in docker
 >>EFK Stack is an enterprise-ready log aggregation and logs analysis framework for bare-metal and container infrastructure. 
 But before deploying an EFK stack, you'll first set up a project directory and create a Docker configuration for deploying EFK Stack on your Docker host
 
-21 - what is java memory leak 
+22 - what is java memory leak 
 >>A Memory Leak is a situation where there are objects present in the heap that are no longer used, but the garbage collector is unable to remove them from memory, 
 and therefore, they're unnecessarily maintained.A memory leak is bad because it blocks memory resources and degrades system performance over time
 
@@ -644,45 +652,45 @@ and therefore, they're unnecessarily maintained.A memory leak is bad because it 
 Using the java. lang. ref package, you can work with the garbage collector in your program. 
 This allows you to avoid directly referencing objects and use special reference objects that the garbage collector easily clears.
 
-22 - what does docker swarm do
+23 - what does docker swarm do
 1-worker node availibility
 2-resource utilization
 3-container scheduling
 4-container fail-over or self-healing
 
-23 - what is docker traefik ingress controller
+24 - what is docker traefik ingress controller
 >>Simplify networking, secure your APIs, and reduce the costs of managing your microservices with a dynamic, production-ready Kubernetes Ingress routing solution.
 
-24 - what is docker node maintaince and types
+25 - what is docker node maintaince and types
 
 >>A swarm consists of one or more nodes: physical or virtual machines running Docker Engine 1.12 or later in swarm mode. There are two types of nodes: managers and workers.
 
-25 - what is docker swarm config
+26 - what is docker swarm config
 
 >>Docker swarm service configs allow you to store non-sensitive information, such as configuration files, outside a service's image or running containers. 
 This allows you to keep your images as generic as possible, without the need to bind-mount configuration files into the containers or use environment variables
 
-26 - what is docker swarm secrets
+27 - what is docker swarm secrets
 
 >>In terms of Docker Swarm services, a secret is a blob of data, such as a password, SSH private key, SSL certificate, or another piece of data that should not 
 be transmitted over a network or stored unencrypted in a Dockerfile or in your application's source code
 
-27 - what is docker swarm helath checks
+28 - what is docker swarm helath checks
 
 >>he Docker swarm health check ensures that the Docker service is running properly. A faulty service can cause a major incident!
 
-28 - In terms of Docker, a bridge network uses a software bridge which allows containers connected to the same bridge network to communicate, 
+29 - In terms of Docker, a bridge network uses a software bridge which allows containers connected to the same bridge network to communicate, 
 while providing isolation from containers which are not connected to that bridge network
 
-29 - what is the differnce between registry and repository 
+30 - what is the differnce between registry and repository 
 
 >>registry inside have an repository, repository inside you can put multiple images
 
-30 - Types of registery
+32 - Types of registery
 
 >>Docker hub , AWS ECR, Azure ACR ,google GCR
 
-31 - how many types to run docker in AWS
+33 - how many types to run docker in AWS
 install docler in ec2 and run conatiner
 run using AWS Elastic conatiners service(ECS)
 Run using AWS ECS Fargate
