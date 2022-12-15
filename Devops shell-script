@@ -698,21 +698,66 @@ Run Using AWS EKS
 
 ==================================================================Ansible===============================================================================
 
-1 - 
+1 - what is Ansible 
 
+>>Ansible is an open-source platform that facilitates configuration management, task automation, or application deployment. It is a valuable DevOps tool. 
+It was written in Python and powered by Red Hat. It uses SSH to deploy SSH without incurring any downtime
+>>Ansible is Idempotent
 
+2 - what is ansible host-patterns
 
+>>An Ansible pattern can refer to a single host, an IP address, an inventory group, a set of groups, or all hosts in your inventory. 
+Patterns are highly flexible - you can exclude or require subsets of hosts, use wildcards or regular expressions, and more. 
+Ansible executes on all inventory hosts included in the pattern.
 
+3 - Describe how Ansible works.
 
+>>ansible is broken down into two types of servers: controlling machines and nodes. Ansible is installed on the controlling computer, 
+and the controlling machines manage the nodes via SSH. 
 
+The controlling machine contains an inventory file that holds the node system’s location. Ansible runs the playbook on the controlling machine 
+to deploy the modules on the node systems. 
+Since Ansible is agentless, there’s no need for a third-party tool to connect the nodes.
 
+4 - Explain what a “playbook” is.
 
+>>Ansible Playbooks are lists of tasks that automatically execute against hosts. Groups of hosts form your Ansible inventory. 
+Each module within an Ansible Playbook performs a specific task. Each module contains metadata that determines when and where a 
+task is executed, as well as which user executes it.
 
+5 - What exactly is a configuration management tool?
+Configuration management tools help keep a system running within the desired parameters. They help reduce deployment time and substantially 
+reduce the effort required to perform repetitive tasks. Popular configuration management tools on the market today include Chef, Puppet, Salt, 
+and of course, Ansible.
 
+6 - What is Ansible Vault?
 
+Ansible vault is used to keep sensitive data such as passwords instead of placing it as plaintext in playbooks or roles. 
+Any structured data file or any single value inside the YAML file can be encrypted by Ansible.
 
+ansible-vault encrypt foo.yml bar.yml baz.yml
 
+ansible-vault decrypt foo.yml bar.yml baz.yml
 
+7 - What is the ad-hoc command in Ansible?
+Ad-hoc commands are like one-line playbooks to perform a specific task only. The syntax for the ad-hoc command is
+
+ansible [pattern] -m [module] -a "[module options]"
+For example, we need to reboot all servers in the staging group
+
+ansible atlanta -a "/sbin/reboot"  -u username --become [--ask-become-pass]
+
+8 - What’s a handler?
+In Ansible, a handler is similar to a regular task in a playbook, but it will only run if a task alerts the handler. 
+Handlers are automatically loaded by roles/<role_name>/handlers/main.yaml. Handlers will run once, after all of the tasks are completed in a particular play. 
+
+9 - what is Ansible Modules
+
+>>What are Ansible modules used for?
+A module is a reusable, standalone script that Ansible runs on your behalf, either locally or remotely. Modules interact with your local machine, an API,
+or a remote system to perform specific tasks like changing a database password or spinning up a cloud instance.
+
+==================================================================Kubernetes=====================================================================================
 
 
 
