@@ -859,7 +859,10 @@ through route53 and internal load balancer is between app and web and the app is
 
 >>YAML is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted
 
+113 - What is SQL Server in simple words?
 
+>>SQL Server is a database server by Microsoft. The Microsoft relational database management system is a software product which primarily stores and retrieves data
+requested by other applications. These applications may run on the same or a different computer
 
 
 
