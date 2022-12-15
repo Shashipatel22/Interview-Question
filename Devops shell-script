@@ -407,7 +407,300 @@ Join
 HTML publisher
 Green Balls
 
-13 - 
+13 - How can you create a backup and copy files in Jenkins?
+
+Jenkins stores all the settings, builds scripts, and logs in the home directory. 
+Then, if you want to create a backup of this Jenkins set up all you have to do is copy this directory. 
+The job directory may also be copied to clone a job or rename the directory.
+
+14 - Name some more continuous Integration tools other than Jenkins.
+Some of the top continuous integration tools other than Jenkins are:
+
+TeamCity
+Travis CI
+Go CD
+Bamboo
+GitLab CI
+CircleCI
+Codeship
+
+15 - Assume that you have a pipeline. The first job that you performed was successful, but the second one failed.  What would you do now?
+
+>>You don't have to worry, and you just have to restart the pipeline from the point where it failed by doing 'restart from stage.'
+
+16 - Explain the process in which Jenkins works?
+Here’s the process in which Jenkins works:
+
+Jenkins checks changes in repositories regularly, and developers must secure their code regularly. 
+Once the changes are defined, Jenkins detects them and uses them to prepare a new build.
+After that, Jenkins will transverse through various stages in its usual pipeline. As one stage completes, the process will move further on to the next stage.
+If a stage fails, the Jenkins build will stop there, and the software will email the team using it. When completed successfully, 
+the code implements itself in the proper server so that testing begins.
+After the successful testing phase, Jenkins shares the results with the team using it.
+
+17 - What is Jenkinsfile? 
+
+Jenkins file is a text file that has a definition of a Jenkins pipeline and is checked into the source control repository.
+It enables code review and iteration on the pipeline. It also permits an audit trail for the pipeline.
+
+18 - Differentiate between Maven, Ant, and Jenkins.
+
+Maven:-
+Build tool
+Perform build operations 
+
+ANT:-
+Build tool
+Perform build operations 
+
+Jenkins:-
+Continuous Integration tool
+Jenkins may run unit tests and deploy applications
+
+19 - Why is Jenkins used with Selenium?
+
+Using Selenium allows Jenkins’s testing whenever there are any software changes or any changes in the environment. 
+When the Selenium test suite is integrated with Jenkins, the testing part is also automated as part of the build process.
+
+20 - what is the multi-branch pipeline.What is the process of making a Multibranch Pipeline in Jenkins?
+
+>>What's a Jenkins Multibranch Pipeline? A multibranch job is simply a folder of pipeline jobs. For every branch you have, Jenkins will create a folder.
+So instead of creating a pipeline job for each of the branches you have in a git repository, you could use a multibranch job.
+
+>>To create a Multibranch Pipeline in Jenkins, follow the following steps:
+
+Open the Jenkins dashboard and create a new item by clicking on 'new item'
+Enter the project name and, from the options, select 'Multibranch pipeline'
+Click on OK
+pipeline
+
+Source: https://www.jenkins.io/doc/book/pipeline/multibranch/
+
+Then select the repository location, branch source (GitHub/Bitbucket), and add the branch source credentials.
+Save the project
+Now, Jenkins automatically creates new Multibranch Pipelines for repositories
+Then to connect to the GitHub repo, we need the HookURL
+To get this URL from the repository settings, add this HookURL to the Webhooks section
+Once the jobs are created, Jenkins will automatically trigger the build
+
+============================================================Docker=========================================================================================
+
+1 - what is docker and conatiner how to use in docker containers
+
+>>Docker is an open-source containerization platform. It is used to automate the deployment of any application, using lightweight, portable containers.
+
+
+Features;-
+Application agility
+Developer productivity
+Easy modeling
+Operational efficiencies
+Placement and affinity
+Version control
+
+--disadvantages:-
+>>Docker is not good for application that requires rich GUI.
+>>It is difficult to manage large amount of containers.
+>>Docker does not provide cross-platform compatibility means if an application is designed to run in a Docker container on windows, then it cannot run on Linux Docker container.
+>>container is process it can fail anytime
+--Advantages
+>>Caching a cluster of containers.
+>>Flexible resource sharing.
+>>Scalability - many containers can be placed in a single host.
+>>Running your service on hardware that is much cheaper than standard servers.
+
+2 - Name and explain the various Docker components.
+The three main Docker components are:
+
+Docker Client. Performs Docker build pull and run operations to open up communication with the Docker Host. 
+The Docker command then employs Docker API to call any queries to run.
+Docker Host. Contains Docker daemon, containers, and associated images. The Docker daemon establishes a connection with the Registry. 
+The stored images are the type of metadata dedicated to containerized applications.
+Registry. This is where Docker images are stored. There are two of them, a public registry and a private one. 
+Docker Hub and Docker Cloud are two public registries available for use by anyone.
+
+3 - why everyone using production environment in kubernets and why not using docker and docker swarm
+
+>>The major difference between the platforms is based on complexity. Kubernetes is well suited for complex applications. 
+On the other hand, Docker Swarm is designed for ease of use, making it a preferable choice for simple applications
+
+>>kubernets have additional network plugins thats why using kubernets and this is this reason docker swarm not using
+plugins ex:-panel and kolak 
+
+4 - what is the problems in persistent storage in docker
+
+>>One common challenge with many cloud-native technologies is persistent data storage. Containers, serverless functions, and apps deployed using an 
+immutable infrastructure model don't typically offer a way to store data permanently because all internal data is destroyed when the application shuts down
+
+5 - What is a container?
+
+>>it is processing machine or servie runing on linux
+>>Containers are deployed applications bundled with all necessary dependencies and configuration files. All of the elements share the same OS kernel. 
+Since the container isn’t tied to any one IT infrastructure, it can run on a different system or the cloud.
+
+6 - Explain virtualization.
+Virtualization is the means of employing software (such as Hypervisor) to create a virtual version of a resource such as a server, data storage, or application. 
+Virtualization lets you divide a system into a series of separate sections, each one acting as a distinct individual system. 
+The virtual environment is called a virtual machine
+
+7 - What’s the difference between virtualization and containerization?
+Virtualization is an abstract version of a physical machine, while containerization is the abstract version of an application.
+
+8 - Last simple question…Describe a Docker container’s lifecycle.
+Although there are several different ways of describing the steps in a Docker container’s lifecycle, the following is the most common:
+
+Create container
+Run container
+Pause container
+Unpause container
+Start container
+Stop container
+Restart container
+Kill container
+Destroy container
+
+9 - Name the essential Docker commands and what they do.
+The most critical Docker commands are:
+
+Build. Builds a Docker image file
+Commit. Creates a new image from container changes
+Create. Creates a new container
+Dockerd. Launches Docker daemon
+Kill. Kills a container
+
+10 - What are Docker object labels?
+
+Labels are the mechanism for applying metadata to Docker objects such as containers, images, local daemons, networks, volumes, and nodes.
+
+11 - what is nodes in docker 
+
+>>A node is an instance of the Docker engine participating in the swarm. You can also think of this as a Docker node. You can run one or more nodes on a single physical computer or cloud server, 
+but production swarm deployments typically include Docker nodes distributed across multiple physical and cloud machines
+
+12 - what docker volumes and mounts explain briefly.How do you find stored Docker volumes?
+
+>>Docker volumes are dependent on Docker's file system and are the preferred method of persisting data for Docker containers and services. When a container is started, Docker loads the read-only image layer, 
+adds a read-write layer on top of the image stack, and mounts volumes onto the container filesystem
+
+Use the command: /var/lib/docker/volumes
+
+13 - can you write a docker file???
+
+--vi Dockerfile
+FROM ubuntu
+LABEL  owner=kanji5413@gmail.com
+RUN apt-get update; \
+    apt install -y nginx vi nano wget curl net-tools; \
+    mkdir /myapp 
+RUN groupadd -r mongodb && useradd -r -g mongodb mongodb
+WORKDIR /myapp
+#CMD ["nginx", "-g", "daemon off;"]
+USER mongodb
+
+:wq
+
+>>docker build .       -->. means present directory 
+
+14 - what is docker compose and docker stack
+
+>>docker compose will allow developer or devops person to create multiple containers and it will save 
+lot time .and its not for production purpose it is only per tseting. if the container get stopped the 
+web application will be face down-time. it is only for one server. if you want install multiple servers you need to use docker-stack
+
+>>docker stack:-Docker Stack is run across a Docker Swarm, which is essentially a group of machines running the Docker daemon, which are grouped together,
+essentially pooling resources. Stacks allow for multiple services, which are containers distributed across a swarm, to be deployed and grouped logically
+
+15 - what is docker swarm is quoram 
+
+>>In a swarm of N managers, a quorum (a majority) of manager nodes must always be available. For example, in a swarm with five managers,
+ a minimum of three must be operational and in communication with each other
+
+16 - why quoram needs an odd number
+>>quoram is an latein word
+>>minimum number of nodes in swarm cluster that needs to be up and running for swarm cluster to work
+
+17 - what is docker ingress and docker gateway-bridge
+>>The docker_gwbridge is a bridge network that connects the overlay networks (including the ingress network) to an individual Docker daemon's physical network. 
+By default, each container a service is running is connected to its local Docker daemon host's docker_gwbridge network
+
+18 - what is ingress controller
+>>The Ingress Controller is an application that runs in a cluster and configures an HTTP load balancer according to Ingress resources. 
+The load balancer can be a software load balancer running in the cluster or a hardware or cloud load balancer running externally
+
+19 - what is roolingupdate in docker
+>>The scheduler applies rolling updates as follows by default: Stop the first task. Schedule update for the stopped task. 
+Start the container for the updated task. If the update to a task returns RUNNING , wait for the specified delay period then start the next task
+
+20 - what is in efk stack in docker
+>>EFK Stack is an enterprise-ready log aggregation and logs analysis framework for bare-metal and container infrastructure. 
+But before deploying an EFK stack, you'll first set up a project directory and create a Docker configuration for deploying EFK Stack on your Docker host
+
+21 - what is java memory leak 
+>>A Memory Leak is a situation where there are objects present in the heap that are no longer used, but the garbage collector is unable to remove them from memory, 
+and therefore, they're unnecessarily maintained.A memory leak is bad because it blocks memory resources and degrades system performance over time
+
+>>How do you fix a memory leak in Java?
+
+Using the java. lang. ref package, you can work with the garbage collector in your program. 
+This allows you to avoid directly referencing objects and use special reference objects that the garbage collector easily clears.
+
+22 - what does docker swarm do
+1-worker node availibility
+2-resource utilization
+3-container scheduling
+4-container fail-over or self-healing
+
+23 - what is docker traefik ingress controller
+>>Simplify networking, secure your APIs, and reduce the costs of managing your microservices with a dynamic, production-ready Kubernetes Ingress routing solution.
+
+24 - what is docker node maintaince and types
+
+>>A swarm consists of one or more nodes: physical or virtual machines running Docker Engine 1.12 or later in swarm mode. There are two types of nodes: managers and workers.
+
+25 - what is docker swarm config
+
+>>Docker swarm service configs allow you to store non-sensitive information, such as configuration files, outside a service's image or running containers. 
+This allows you to keep your images as generic as possible, without the need to bind-mount configuration files into the containers or use environment variables
+
+26 - what is docker swarm secrets
+
+>>In terms of Docker Swarm services, a secret is a blob of data, such as a password, SSH private key, SSL certificate, or another piece of data that should not 
+be transmitted over a network or stored unencrypted in a Dockerfile or in your application's source code
+
+27 - what is docker swarm helath checks
+
+>>he Docker swarm health check ensures that the Docker service is running properly. A faulty service can cause a major incident!
+
+28 - In terms of Docker, a bridge network uses a software bridge which allows containers connected to the same bridge network to communicate, 
+while providing isolation from containers which are not connected to that bridge network
+
+29 - what is the differnce between registry and repository 
+
+>>registry inside have an repository, repository inside you can put multiple images
+
+30 - Types of registery
+
+>>Docker hub , AWS ECR, Azure ACR ,google GCR
+
+31 - how many types to run docker in AWS
+install docler in ec2 and run conatiner
+run using AWS Elastic conatiners service(ECS)
+Run using AWS ECS Fargate
+Run Using AWS EKS
+
+==================================================================Ansible===============================================================================
+
+1 - 
+
+
+
+
+
+
+
+
+
+
 
 
 
