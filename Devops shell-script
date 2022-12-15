@@ -1002,6 +1002,8 @@ immediately . the pods need to chnage old to new pods then you will get . you sh
 remove the pods and add the pods into replication-controller or replication-set
 
 >>you can generate yaml code using --dry-run -o yaml command using
+>>k8s is designed for stateless applications (it is temporaray data) if the pod deleted 
+data automatically delete
 
 2 - what is runtime in kubernets
 >>Runtime. The container runtime is the low-level component that creates and runs containers. Docker currently uses runC, the most popular runtime, 
@@ -1084,7 +1086,14 @@ and can include characters not permitted by labels
 >>Kubernetes labels are key-value pairs that can connect identifying metadata with Kubernetes objects. 
 Kubernetes offers integrated support for using these labels to query objects and perform bulk operations on selected subsets
 
-17 - what is the differnce between replication controller and replication set
+
+
+17 - what is the differnce between replication controller and replication set and what is replication controller
+
+>>>>replication-controller is used to increase or decrease the pods
+>>it is old version it doesnt accept multiple labels that why we use replication-set
+>>if your runing an image in pods but your suddenly changing into image but it will not change or updateimmediately . the pods need to chnage 
+old to new pods then you will get . you should delete the pods or remove the pods and add the pods into replication-controller or replication-set
 
 >>The major difference between a replication controller and replica set is that the rolling-update command works with Replication Controllers, 
 but won't work with a Replica Set
@@ -1317,7 +1326,21 @@ with encryption in your clusters. Using Secrets gives you more flexibility in a 
 
 49 - What is the Blue/Green Deployment Pattern
 
->>
+actually three ways update your pods 
+1-spining up new pods and delete old pods
+
+>>we pods connected in our service but we delete the pods and we can create the pods and connect to that services this one method there is a latency and 
+downtime in your application
+
+2-blue-green deployment pattern
+>>we have one replication controller1 we need update some pods into new image so we can create one more replication controller2 and we can chane service 
+replication controller1 to second controller2 directly but we will get some latency downtime in your application to overcome we can use more method
+
+rolling-update:-
+if we have service that connected 3 pods we can create 3 more new pods with new image and we can apply rolling update then it will delete the first pod and add 
+that first pod place new image pod and delete the second pod and add new image pod and one more add new image pod it will update automatically there is no latency
+or downtime in your application
+
 
 
 
