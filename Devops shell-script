@@ -993,7 +993,331 @@ They are similar to “EC2 instance user data” scripts that only run once on t
 
 ===============================================Kubernetes===============================================================================================
 
-1 - 
+1 - what is kubernets why everyone using kubernets
+>>Kubernetes is a way to deploy images and containers and manage the scaling, deployment, resource balancing and traffic for cloud services. 
+This is becoming essential as teams build microservices and package them into containers
+           or
+>>if your runing an image in pods but your suddenly changing into image but it will not change or update
+immediately . the pods need to chnage old to new pods then you will get . you should delete the pods or
+remove the pods and add the pods into replication-controller or replication-set
+
+>>you can generate yaml code using --dry-run -o yaml command using
+
+2 - what is runtime in kubernets
+>>Runtime. The container runtime is the low-level component that creates and runs containers. Docker currently uses runC, the most popular runtime, 
+which adheres to the OCI standard that defines container image formats and execution
+
+3 - what is the differnce between monolithic and microservices and advantages and disadvantages
+>>A monolithic application is built as a single unified unit while a microservices architecture is a collection of smaller, independently deployable services.
+
+What are the advantages and disadvantages of monolithic architecture?
+Monolithic systems are systems in which all services and functions are tightly bonded together in a “monolith”. Monolithic architecture has many advantages, 
+including speedy development and deployment, but it often lacks flexibility and scalability.
+
+What are Microservices?
+Pros of Microservices. Easier Scaling Up. Improved Fault Tolerance. Ease of Understanding of the Codebase. Scope for Experimenting. ...
+Cons of Microservices. Increased Complexity of Communication. Requires More Resources. Global Testing and Debugging is Difficult. Not Practical for Small Applications.
+
+4 - what is etcd in kubernets
+>>etcd is like an raft database, etcd is an key value pair database
+>>etcd is an encypted database , one and only api will connect to the database
+
+what is raft database
+>>Raft is a distributed consensus algorithm. It was designed to be easily understood. It solves the problem of getting multiple servers 
+to agree on a shared state even in the face of failures. The shared status is usually a data structure supported by a replicated log
+
+5 - what is kube proxy what is the work on kube proxy
+>>Kube-proxy maintains network rules on each Amazon EC2 node. It enables network communication to your pods. Kube-proxy is not deployed to Fargate nodes. 
+For more information, see kube-proxy in the Kubernetes documentation.
+
+6 - what is kube schedular and what is the work on kube schedular
+>>The Kubernetes scheduler is a control plane process which assigns Pods to Nodes. The scheduler determines which Nodes are valid placements for
+ each Pod in the scheduling queue according to constraints and available resources
+
+7 - what is kube controller manager 
+>>The Kubernetes controller manager is a daemon that embeds the core control loops shipped with Kubernetes. In applications of robotics and automation, 
+a control loop is a non-terminating loop that regulates the state of the system
+
+8 - what is kube-api-server
+>>Kubernetes API server runs as a container (kube-apiserver) within Pods in the kube-system namespace. In order to make its access easier, 
+it's exposed through a service named kubernetes in the default namespace.
+
+9 - what is kubelet 
+>>kubelet is an agent of kubernets 
+>>What is Kubelet used for?
+The kubelet is the primary "node agent" that runs on each node. It can register the node with the apiserver using one of: the hostname; a flag to override the hostname; 
+or specific logic for a cloud provider. The kubelet works in terms of a PodSpec. A PodSpec is a YAML or JSON object that describes a pod
+
+10 - what is pod in kubernets
+>>pod can have multiple containers or multiple volumes this called pods
+>>pod is nothing but container .you cant create container in kubernets
+>>pod inside if have multiple containers but pod have only one ip address
+
+11 - what is kubernets CNI container network interafce
+
+>>Container Network Interface (CNI) is a framework for dynamically configuring networking resources. It uses a group of libraries and specifications written in Go. 
+The plugin specification defines an interface for configuring the network, provisioning IP addresses, and maintaining connectivity with multiple hosts
+
+12 - how to connect your pods local
+>>using port forwarding or using services
+
+13 - what is kubenet limitions
+
+>>kubenet - a simple /24 IP address range can support up to 251 nodes in the cluster (each Azure virtual network subnet reserves the 
+first three IP addresses for management operations)
+ This node count could support up to 27,610 pods (with a default maximum of 110 pods per node with kubenet
+
+14 - what is pod security policy
+
+>>A Pod Security Policy is a cluster-level resource that controls security sensitive aspects of the pod specification. 
+The PodSecurityPolicy objects define a set of conditions 
+that a pod must run with in order to be accepted into the system, as well as defaults for the related fields.
+
+15 - what is the differnece between lables and annonations
+
+>>Labels can be used to select objects and to find collections of objects that satisfy certain conditions. In contrast, 
+annotations are not used to identify and select objects. The metadata in an annotation can be small or large, structured or unstructured, 
+and can include characters not permitted by labels
+
+16 - what is the importanets of lables
+
+>>Kubernetes labels are key-value pairs that can connect identifying metadata with Kubernetes objects. 
+Kubernetes offers integrated support for using these labels to query objects and perform bulk operations on selected subsets
+
+17 - what is the differnce between replication controller and replication set
+
+>>The major difference between a replication controller and replica set is that the rolling-update command works with Replication Controllers, 
+but won't work with a Replica Set
+
+18 - what is metadata
+
+>>Metadata makes finding and working with data easier – allowing the user to sort or locate specific documents. Some examples of basic metadata are author, date created, date modified, and file size. 
+Metadata is also used for unstructured data such as images, video, web pages, spreadsheets, etc.
+
+19 - how to remove pods and how to add pods into replicas
+
+>>First, confirm the name of the node you want to remove using kubectl get nodes , and make sure that all of the pods on the node can be safely terminated without any special procedures. 
+Next, use the kubectl drain command to evict all user pods from the node
+
+20 - what is rolling update in kubernets and disadvantages
+
+>>Rolling updates incrementally replace your resource's Pods with new ones, which are then scheduled on nodes with available resources. 
+Rolling updates are designed to update your workloads without downtime. The following objects represent Kubernetes workloads
+
+disadvantages:-
+1 - it will be a manual update from one image to other image
+2 - new replication-controller will be created and old replication-controller will be deleted
+3 - roll back needs to change again to the old image
+4 - Overall manual process and replication-controller update is deprecated
+
+21 - how you can update your pods or services
+>>we can use deployments to update the but we don't use replication-controller
+>>we use manifest files to version control. then we can see the versioning if we kubectl 
+but after week we come what command we used we don't remeber and there is no version control right
+
+22 - what is deployments what is the use of deployments
+
+>>A Kubernetes Deployment tells Kubernetes how to create or modify instances of the pods that hold a containerized application. 
+Deployments can help to efficiently scale the number of replica pods, enable the rollout of updated code in a controlled manner, or roll back to an earlier deployment version if necessary.
+
+Advantages:-
+1 - it uses replicasets and replicasets automatically performs the rollingupdates.
+2 - Rollback is easy as we can record the deployments
+3 - we can use liveness and reasyness probes to improve application availibility
+4 - we can pause & resume the deployment which us usefull for canary updates
+
+23 - what is liveness probe and readyness probe
+
+Liveness probes determine whether or not an application running in a container is in a healthy state. 
+If the liveness probe detects an unhealthy state, then Kubernetes kills the container and tries to redeploy it. The liveness probe is configured in the spec. containers.
+
+A readiness probe indicates whether applications running in a container are ready to receive traffic. 
+If so, Services in Kubernetes can send traffic to the pod, and if not, the endpoint controller removes the pod from all services
+
+24 - what is service and types of services
+
+>>A Service in Kubernetes is an abstraction which defines a logical set of Pods and a policy by which to access them. 
+Services enable a loose coupling between dependent Pods. A Service is defined using YAML (preferred) or JSON, like all Kubernetes objects
+
+types:-
+1 - ClusterIP what is clusterip
+2 - Nodeport what is nodeport
+3 - loadbalancer what isloadbalancer
+4 - None(headless)what is headless service
+5 - Ingress controller what is ingress controller 
+
+25 - what is headless services
+
+>>Headless service is a regular Kubernetes service where the spec. clusterIP is explicitly set to "None" and spec. 
+type is set to "ClusterIP". Instead, SRV records are created for all the named ports of service's endpoints.
+
+26 - what is ingress controller and advantages
+
+>>An Ingress controller abstracts away the complexity of Kubernetes application traffic routing and provides a bridge between Kubernetes services and external ones. 
+Kubernetes Ingress controllers: Accept traffic from outside the Kubernetes platform, and load balance it to pods (containers) running inside the platform.
+
+>>What is one of the benefits of an ingress controller on the cloud?
+The major advantage of using a cloud-based Ingress Controller is native integration with other cloud services. 
+For instance, GCE Ingress Controller supports Cloud IAP for Google Kubernetes Engine to easily turn on Identity-Aware Proxy to protect internal K8s applications
+
+27 - one ingress controller can you add another ingress or you can ad one ingress to add muliple domains to route
+
+ans:yes  
+ans:yes  
+
+28 - what is NameSpaces and what is use for it
+
+>>Namespaces are a way to organize clusters into virtual sub-clusters — they can be helpful when different teams or projects share a Kubernetes cluster. 
+Any number of namespaces are supported within a cluster, each logically separated from others but with the ability to communicate with each other
+
+29 - what is resource-quota and limit-range in kubernetes
+
+>>The resource quota is the total allocated resources for a particular namespace, 
+while limit range also used to assign limits for objects like containers (Pods) running inside the namespace. This is one of the best practice recommended.
+
+30 - what is user-Acount and Service-Account in kubernetes
+
+>>User accounts are meant to be used by humans. But when a pod running in the cluster wants to access the Kubernetes API server, it needs to use a service account instead. 
+Service accounts are just like user accounts but for non-humans
+
+31 - what is api-resources and api-versions
+
+>>They are available in the discovery documentation, i.e. via the API, e.g. /api/apps/v1 . 
+where api-version is core for the core resources and should be replaced by "" (an empty quoted string) in your role definition. For example, core pods/status: get patch update
+
+What are API versions in Kubernetes?
+The Google Kubernetes Engine API has three groups: v1 for generally available features. v1alpha1 for alpha features. v1beta1 for beta features
+
+32 - what is Role, clusterRole, RoleBinding, ClusterRoleBinding
+
+we can create cluster level but assigning namespace level why because if one user need to access the 
+multiple namespaces if we use namespace to create 5 namespaces we need to create 5 roles so that why we use 
+cluster role so we can give access to namespace-level 
+
+33 - what is multi-container pods in kubernetes and use-case and types 
+
+>>runing multiple containers in a singel pod is called multi-container pod
+
+what is the use-case:
+>>backend jobs need to run we are using to run git sync using emptydir downloading gitrepo
+using main container sidecar container 
+
+types:
+
+1-Init containers
+>>it will complete work and go 
+but if init container not complete then app container not come until the init container complete
+
+2-Sidecar containers
+>>sidecar containers will help to app containers
+
+34 - what are the differnet types conatiners we can deploy
+
+1 - init containers
+2 - app containers
+3 - sidecar containers
+ 
+35 - what is stateless application and stateful application
+
+>>A stateless system sends a request to the server and relays the response (or the state) back without storing any information. On the other hand, 
+stateful systems expect a response, track information, and resend the request if no response is received
+
+36 - what is kubernetes volumes. where to use this volumes and how to use
+
+>>A Kubernetes volume is a directory that contains data accessible to containers in a given Pod in the orchestration and scheduling platform. 
+Volumes provide a plug-in mechanism to connect ephemeral containers with persistent data stores elsewhere
+
+37 - what is emptydir in kubernetes
+
+>>One very useful aspect of Kubernetes emptyDir volumes is the support for a memory-backed filesystem as the backing store. 
+This is very useful for certain scenarios when you want to use the node memory as a local cache or as a means to share data between different containers.
+
+38 - how many types attaching volumes in kubernetes or Raw Disk Mapping
+
+1 - Direct Mapping
+--you can directly map ebs raws volume to the pod 
+
+Disadvantages:-
+1-you should give volume id to the developer
+2-the major drawback is that it can be only mounted to one ec2-instance
+3-this also means that it can't be shared between multiple pods
+4-only one pod can using raw disk can read-write
+
+2 - Static Provisioning (pv-persistent volume, pvc-persistentvolumecliam)
+
+1-cluster admin must create persistent volume
+2-Developer can use the persistent volume using the persistent volume clamis
+
+3 - Dynamic Provisioning(pvc -persistentvolumecliam)
+
+>>Dynamic volume provisioning allows storage volumes to be created on-demand. Without dynamic provisioning, cluster administrators have to manually 
+make calls to their cloud or storage provider to create new storage volumes, and then create PersistentVolume objects to represent them in Kubernetes.
+
+39 - what is persistent volumes && non-persistent volumes
+
+>>A persistent volume is a piece of storage in a cluster that an administrator has provisioned. It is a resource in the cluster, just as a node is a cluster resource. 
+A persistent volume is a volume plug-in that has a lifecycle independent of any individual pod that uses the persistent volume.
+
+>>Non-persistent storage: Your data can be removed when the container, the worker node, or the cluster is removed. Non-persistent storage is typically used for logging information, 
+such as system logs or container logs, development testing, or when you want to access data from the host's file system
+
+40 - what is the problem or dis-advantages. if we use kubernetes volume as aws-EBS
+
+1-we cannot mount to multiple nodes
+2-cannot be used if the app is distrbuted multiple Availability zones
+3-mounting takes time for EBS
+4-low mount times and stuck volumes which equal slow deployments
+5-slow failover, which means no high availability
+
+41 - what is stateful-set and advantages and dis-advantages
+
+>>StatefulSet is the workload API object used to manage stateful applications. Manages the deployment and scaling of a set of Pods, and provides guarantees about the ordering and uniqueness of these Pods. 
+Like a Deployment, a StatefulSet manages Pods that are based on an identical container spec.
+
+42 - what is daemon-set
+
+>>DaemonSet manages groups of replicated Pods. However, DaemonSets attempt to adhere to a one-Pod-per-node model, either across the entire cluster or a subset of nodes.
+ As you add nodes to a node pool, DaemonSets automatically add Pods to the new nodes as needed
+
+43 - what is node-maintenance and uses also
+
+>>Placing a node into maintenance marks the node as unschedulable and drains all the virtual machines and pods from it. 
+Virtual machine instances that have a LiveMigrate eviction strategy are live migrated to another node without loss of service
+
+44 - what is advance-scheduling and tiants and tolerance
+
+>>Node affinity is a property of Pods that attracts them to a set of nodes (either as a preference or a hard requirement). 
+Taints are the opposite -- they allow a node to repel a set of pods. Tolerations are applied to pods. Tolerations allow the scheduler to schedule pods with matching taints.
+
+45 - how to save logs of k8s cluster
+
+>>To get Kubectl pod logs, you can access them by adding the -p flag. Kubectl will then get all of the logs stored for the pod. 
+This includes lines that were emitted by containers that were terminated.
+
+46 - what is fluentd 
+
+>>Fluentd is a popular open-source data collector that we'll set up on our Kubernetes nodes to tail container log files, 
+filter and transform the log data, and deliver it to the Elasticsearch cluster, where it will be indexed and stored
+
+47 - what is node affinity and pod affinity ,anti afffinity
+
+>>Node affinity is one of the mechanisms Kubernetes provides to define where Kubernetes should schedule a pod. 
+It lets you define nuanced conditions that influence which Kubernetes nodes are preferred to run a specific pod.
+
+>>Pod affinity/anti-affinity allows you to constrain which nodes your pod is eligible to be scheduled on based on the labels on other pods
+
+48 - what is kubernetes secrets. which type most uses in secrets
+
+>>Secrets are Kubernetes resources used to configure your applications with sensitive data that can be made accessible to your container workloads at runtime.
+ Kubernetes has native support for storing and handling this type of sensitive data with care
+
+>>What are the type of secrets in Kubernetes?
+Kubernetes Secrets are secure objects which store sensitive data, such as passwords, OAuth tokens, and SSH keys, etc. 
+with encryption in your clusters. Using Secrets gives you more flexibility in a Pod Life cycle definition and control over how sensitive data is used.
+
+49 - What is the Blue/Green Deployment Pattern
+
+>>
 
 
 
