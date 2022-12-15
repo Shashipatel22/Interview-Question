@@ -741,15 +741,136 @@ instance as de-registered. The maximum timeout limit does not apply to connectio
 
 94 - what is lambda and what is use of lambda
 
->>Lambda runs your code on high availability compute infrastructure and performs all the administration of your compute resources. This includes server and operating system maintenance, 
-capacity provisioning and automatic scaling, code and security patch deployment, and code monitoring and logging.
+>>Lambda runs your code on high availability compute infrastructure and performs all the administration of your compute resources. This includes server and 
+operating system maintenance, capacity provisioning and automatic scaling, code and security patch deployment, and code monitoring and logging.
 
-95 - what is AWS Service Catalog
+95 - What is Elastic Beanstaclk
 
->>AWS Service Catalog enables organizations to create and manage catalogs of IT services that are approved for AWS. 
-These IT services can include everything from virtual machine images, servers, software, databases, and more to complete multi-tier application architectures
+>>AWS Elastic Beanstalk is an orchestration service offered by Amazon Web Services for deploying applications which orchestrates various AWS services, 
+including EC2, S3, Simple Notification Service, CloudWatch, autoscaling, and Elastic Load Balancers
 
-96 - 
+>>Elastic beanstaclk is used  if the developer is developing java application he is checking and deploying in 3 days in a week so we can use elastic beanstaclk
+using create servers and required configuration easily
+
+96 - what is global acclerator
+
+>> AWS Global Accelerator ingresses traffic from the edge location that is closest to your end clients through anycast static IP addresses. Then traffic traverses 
+the congestion-free and redundant AWS global network, which optimizes the path to your application that is running in an AWS Region
+
+97 - what is WAF in AWS
+
+AWS WAF is a web application firewall that lets you monitor the HTTP(S) requests that are forwarded to your protected web application resources. 
+You can protect the following resource types: Amazon CloudFront distribution
+
+98 - what is cognito
+
+>>Amazon Cognito lets you easily add user sign-up and authentication to your mobile and web apps. Amazon Cognito also enables you to authenticate users through an 
+external identity provider and provides temporary security credentials to access your app's backend resources in AWS or any service behind Amazon API Gateway
+
+>>you can intregrate the third-party signin and login functionalitys
+
+99 - what is docker-ECR
+
+>>Amazon Elastic Container Registry (Amazon ECR) is an AWS managed container image registry service that is secure, scalable, and reliable. Amazon ECR supports 
+private repositories with resource-based permissions using AWS IAM
+
+100 - what is cloud-formation (it is infrastructure as a code)(IAAS)
+
+>>AWS CloudFormation is a service that gives developers and businesses an easy way to create a collection of related AWS 
+and third-party resources, and provision and manage them in an orderly and predictable fashion
+                                   (or)
+>>AWS CloudFormation simplifies provisioning and management on AWS. You can create templates for the service or application architectures you want 
+and have AWS CloudFormation use those templates for quick and reliable provisioning of the services or applications (called “stacks”).
+
+---Advantages
+>>CloudFormation allows you to use programming languages or a simple text file to model and provision, in an automated and secure manner, 
+all the resources needed for your applications across all regions and accounts. This gives you a single source of truth for your AWS and third-party resources.
+
+---Disadvantages
+>>CloudFormation uses either JSON or YAML. This makes CloudFormation easy to read and manage. But there is a constraint that doesn't allow AWS developers to 
+create CloudFormation templates greater than 51MB in size. In case the template exceeds this size limit, developers need to create a nested stack for the templates.
+
+>we can use this template to create the services we can use this code to version control and if we can modify the code we can easily undesrstand
+>>aws cloud-formation uses YAML and JSON lanugauge
+>>Save the code in an S3 bucket, which serves as a repository for the code.
+>>Use AWS CloudFormation to call the bucket and create a stack on your template
+
+101 - if the replacement is true in cloud-formation
+
+>>in cloud formation when your are deployed one server and then changed key pair or something nything in your cloud-formation and importing in resource 
+through updating when its come true means it will destroy the server or ec2-system and install fresh system or ec2 or resource. 
+if it comes false then it update the system or resources
+
+102 - what is import-resource in cloud-formation
+
+>>in cloud formation import-resource using. when you acccidentaly created ec2-instance manualy by mistake without deleeting that
+you can import that resource using the Import-resource option but you must mention "deletionpolicy": "retain" is mandatory and if you want destory that system using
+cloud-formation means first system will delete but next time add system not gone delete because it will using retain policy
+
+103 - what is roolback failure in cloud-formation
+
+>>roll-back failure is must be enable. when your deploying code using cloud-formation if gets an error then automatically delete the everything what is deployed 
+in cloud-formation 
+
+104 - what is designer in cloud-formation
+
+>>AWS CloudFormation Designer (Designer) is a graphic tool for creating, viewing, and modifying AWS CloudFormation templates. With Designer, you can diagram your 
+template  resources using a drag-and-drop interface, and then edit their details using the integrated JSON and YAML editor
+
+105 - what is stack policy in cloud-formation
+
+>>stack-policy is used to restrict the updates of your cloud-formation templates of any user anyone
+
+106 - what is nested template in cloud-formation
+
+>>nested stack using you can create multiple resource like 3 differnet vpc inside the 3 servers using centrailized url or your cloud formation stored or saved 
+in somewhere s3 any where 
+
+107 - what is stackset in cloud-formation
+
+
+108 -  what is drifting in cloud-formation
+
+
+109 - what is detect drift in cloud-formation
+
+
+
+110 - what is code smell
+
+>>Code smells indicate a deeper problem, but as the name suggests, they are sniffable or quick to spot. The best smell is something easy to find but 
+will lead to an interesting problem, like classes with data and no behavior.
+
+111 -what JSON (JavaScript Object Notation)
+
+>>It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, 
+so it can be displayed on a web page, or vice versa).
+
+112 - can you explain 3tier architecture or elbrate them
+>>first we have extranal load balancer and internal load balancer then the extranal load balancer is open to the internet
+through route53 and internal load balancer is between app and web and the app is connected to database
+
+>>using public and private subnets
+
+113 - what is YAML
+
+>>YAML is a human-readable data-serialization language. It is commonly used for configuration files and in applications where data is being stored or transmitted
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
