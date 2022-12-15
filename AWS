@@ -70,11 +70,18 @@ create CloudFormation templates greater than 51MB in size. In case the template 
 
 11 - what is nested template in cloud-formation
 
+
 12 - if the replacement is true in cloud-formation
 
 >>in cloud formation when your are deployed one server and then changed key pair or something nything in your cloud-formation and importing in resource 
 through updating when its come true means it will destroy the server or ec2-system and install fresh system or ec2 or resource. 
 if it comes false then it update the system or resources
+
+13 - what is import-resource in cloud-formation
+
+>>in cloud formation import-resource using. when you acccidentaly created ec2-instance manualy by mistake without deleeting that
+you can import that resource using the Import-resource option but you must mention "deletionpolicy": "retain" is mandatory and if you want destory that system using
+cloud-formation means first system will delete but next time add system not gone delete because it will using retain policy
 
 10 - what is roolback failure in cloud-formation
 
