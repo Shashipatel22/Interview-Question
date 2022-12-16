@@ -94,8 +94,8 @@ are the areas that are present inside the regions. These are generally isolated 
 
 10  - what is VPC Perrring
 
->>A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses.
-Instances in either VPC can communicate with each other as if they are within the same network
+>>A VPC peering connection is a networking connection between two VPCs or two differnet networks. that enables you to route traffic between 
+two differnt networks or two vpcs. once perring comleted they can communicate each other as if they are within the same network
 
 >>you can also create the vpc peering one region mumbai to another region ohio like this
 >>you can also vpc peering one account to another account
