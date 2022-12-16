@@ -48,9 +48,9 @@ Storage
 Networking
 Here are some of the AWS products that are built based on the three cloud service types:
 
-Computing - These include EC2, Elastic Beanstalk, Lambda, Auto-Scaling, and Lightsat.
+Computing - These include EC2, Elastic Beanstalk, Lambda, Auto-Scaling, and Lightsail.
 
-Storage - These include S3, Glacier, Elastic Block Storage, Elastic File System.
+Storage - These include S3-simple service storage, Glacier, Elastic Block Storage, Elastic File System.
 
 Networking - These include VPC, Amazon CloudFront, Route53
 
