@@ -54,10 +54,10 @@ Storage - These include S3-simple service storage, Glacier, Elastic Block Storag
 
 Networking - These include VPC, Amazon CloudFront, Route53
 
-5 - what is virtual machines
+5 - what is virtualization
 
->>In computing, a virtual machine is the virtualization/emulation of a computer system. virtual machine software can run programs and operating systems, store data, connect
-to networks and doother computing functions and reuires maintenance such as updates and system montoring
+>>Virtualization uses software to create an abstraction layer over computer hardware that allows the hardware elements of a single computer—processors, memory, 
+storage and more—to be divided into multiple virtual computers, commonly called virtual machines (VMs)
 
 6 - What are the different types of virtualization in AWS, and what are the differences between them?
 
