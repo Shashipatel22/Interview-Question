@@ -1,19 +1,44 @@
+
+APPLICATION-----------------------------------------------|this two is SAAS
+DATA------------------------------------------------------|
+RUNTIME                              |
+MIDDEL-WARE                          |
+OPERATING SYSTEM ----                |------>This all are PAAS like mysql,Azure app service
+VIRTUALIZATION      |                |
+SERVER              |----------------|------------->This all are IAAS ex:-AWS
+STORAGE             |                |
+NETWORK-------------------------------
+
 1 - what is IAAS
 
->>Infrastructure as a service (IaaS) is a type of cloud computing service that offers essential compute, storage, and networking resources on demand, 
- on a pay-as-you-go basis. IaaS is one of the four types of cloud services, along with software as a service (SaaS), platform as a service (PaaS), and serverless
- 
- 2 - what PAAS
+>>Infrastructure as a service (IaaS) is also known as Hardware as a service. the cloud provider provides the Infrastructure to the developers
+like network, storage, virtualization,servers can managed by cloud provider
+
+>>users are managed by operating system and middle ware, runtime data application all are managed by developers
+>>by using IAAS to develop the application is very hard by compared to PAAS
+Advantages:-
+1-control high
+2-cost saving
+3-scalibility. 
+4-faster time to market
+5-expand a grow
+6-tight security
+7-anytime any where access
+Disadvantages:-
+1- no internet no work
+2-privacy is limit
+3-virtualization depend
+
+2 - what PAAS
  
  >>Platform as a Service (PaaS) is a complete cloud environment that includes everything developers need to build, run, and manage applications—from servers and 
  operating systems to all the networking, storage, middleware, tools, and more.
  
- 3 - what is SAAS
+3 - what is SAAS
  
- >>What is SaaS? Software as a service (or SaaS) is a way of delivering applications over the Internet—as a service. Instead of installing and maintaining software,
- you simply access it via the Internet, freeing yourself from complex software and hardware management
+ >>SAAS is pre-existed application that applications are accessible through internet connection and web-browsers like google chrome, gmail, mozila browser
  
- 4 - Define and explain the three basic types of cloud services and the AWS products that are built based on them?
+4 - Define and explain the three basic types of cloud services and the AWS products that are built based on them?
 
 >>The three basic types of cloud services are:
 
